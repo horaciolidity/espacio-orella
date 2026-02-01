@@ -273,6 +273,41 @@ function App() {
             <p><strong>Email:</strong> contacto@espacioorella.cl</p>
           </div>
         </section>
+        <section id="opiniones" className="container reviews-section">
+          <div className="section-header animate-on-scroll">
+            <h2>Experiencias y Ubicación</h2>
+            <p className="section-intro">Tu opinión es fundamental para nosotros. Te invitamos a compartir tu experiencia en Espacio Orellana y a visitarnos en nuestro rincón de paz en San Antonio.</p>
+          </div>
+
+          <div className="reviews-layout">
+            <div className="reviews-cta card animate-on-scroll">
+              <div className="google-icon">⭐</div>
+              <h3>¡Déjanos una reseña!</h3>
+              <p>Si has visitado nuestro espacio, nos encantaría que compartieras tu experiencia. Tu feedback ayuda a otros a descubrir este lugar de bienestar.</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Espacio+Orellana+Barrancas+San+Antonio"
+                target="_blank"
+                rel="noreferrer"
+                className="btn primary google-btn"
+              >
+                Escribir reseña en Google
+              </a>
+            </div>
+
+            <div className="map-container card animate-on-scroll">
+              <iframe
+                title="Ubicación Espacio Orellana"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.8687353982544!2d-71.5985!3d-33.5878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzE2LjEiUyA3McKwMzUnNTQuNiJX!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl"
+                width="100%"
+                height="300"
+                style={{ border: 0, borderRadius: '12px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="site-footer">
