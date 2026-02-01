@@ -18,6 +18,8 @@ function App(){
 
   const toggleTheme = ()=> setTheme(t=> t === 'light' ? 'dark' : 'light')
 
+  const [activeTab, setActiveTab] = useState('resumen')
+
   const handleSubmit = (e) =>{
     e.preventDefault();
     const form = new FormData(e.target);
@@ -112,23 +114,23 @@ function App(){
           </div>
 
           <div className="events-tabs">
-            <button className="tab active" data-tab="resumen">Resumen</button>
-            <button className="tab" data-tab="holisticos">Talleres Holísticos</button>
-            <button className="tab" data-tab="retiros">Retiros</button>
-            <button className="tab" data-tab="culinarios">Talleres Culinarios</button>
-            <button className="tab" data-tab="cultural">Creativo & Cultural</button>
+            <button className={`tab ${activeTab === 'resumen' ? 'active' : ''}`} onClick={()=> setActiveTab('resumen')}>Resumen</button>
+            <button className={`tab ${activeTab === 'holisticos' ? 'active' : ''}`} onClick={()=> setActiveTab('holisticos')}>Talleres Holísticos</button>
+            <button className={`tab ${activeTab === 'retiros' ? 'active' : ''}`} onClick={()=> setActiveTab('retiros')}>Retiros</button>
+            <button className={`tab ${activeTab === 'culinarios' ? 'active' : ''}`} onClick={()=> setActiveTab('culinarios')}>Talleres Culinarios</button>
+            <button className={`tab ${activeTab === 'cultural' ? 'active' : ''}`} onClick={()=> setActiveTab('cultural')}>Creativo & Cultural</button>
           </div>
 
           <div className="events-content">
-            <div className="tab-panel" data-panel="resumen">
+            {activeTab === 'resumen' && (
               <div className="card">
                 <h3>Resumen de servicios para eventos</h3>
                 <p>Ofrecemos paquetes flexibles que incluyen alojamiento, uso de espacios comunes, apoyo logístico y opciones de alimentación con productos locales. Ideal para facilitadores, organizaciones y grupos creativos que buscan una experiencia inmersiva junto al mar.</p>
                 <p className="muted">Duración típica: 1 fin de semana — 7 días. Posibilidad de adaptaciones según necesidades.</p>
               </div>
-            </div>
+            )}
 
-            <div className="tab-panel" data-panel="holisticos" style={{display:'none'}}>
+            {activeTab === 'holisticos' && (
               <div className="events-grid">
                 <article className="card event-card">
                   <h3>Taller de Yoga y Meditación</h3>
@@ -141,9 +143,9 @@ function App(){
                   <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
-            </div>
+            )}
 
-            <div className="tab-panel" data-panel="retiros" style={{display:'none'}}>
+            {activeTab === 'retiros' && (
               <div className="events-grid">
                 <article className="card event-card">
                   <h3>Retiro de Bienestar 3 días</h3>
@@ -156,9 +158,9 @@ function App(){
                   <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
-            </div>
+            )}
 
-            <div className="tab-panel" data-panel="culinarios" style={{display:'none'}}>
+            {activeTab === 'culinarios' && (
               <div className="events-grid">
                 <article className="card event-card">
                   <h3>Taller de Cocina Autóctona</h3>
@@ -171,9 +173,9 @@ function App(){
                   <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
-            </div>
+            )}
 
-            <div className="tab-panel" data-panel="cultural" style={{display:'none'}}>
+            {activeTab === 'cultural' && (
               <div className="events-grid">
                 <article className="card event-card">
                   <h3>Encuentros Creativos</h3>
@@ -186,7 +188,7 @@ function App(){
                   <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
-            </div>
+            )}
           </div>
         </section>
 
