@@ -11,6 +11,9 @@ function App() {
     }
   })
 
+  const [activeTab, setActiveTab] = useState('resumen')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
     try { localStorage.setItem('theme', theme) } catch (e) { }
@@ -27,12 +30,9 @@ function App() {
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     return () => observer.disconnect();
-  }, [activeTab]); // observer depends on tab content changing
+  }, [activeTab]); // Now activeTab is defined before this effect
 
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
-
-  const [activeTab, setActiveTab] = useState('resumen')
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
