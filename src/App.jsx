@@ -65,6 +65,26 @@ function App(){
           </div>
         </section>
 
+        <script>
+          // Tabs behavior: simple DOM-based, progressive enhancement
+          (function(){
+            if(typeof window === 'undefined') return;
+            function initTabs(){
+              const tabs = document.querySelectorAll('.events-tabs .tab');
+              const panels = document.querySelectorAll('.events-content .tab-panel');
+              tabs.forEach(t=> t.addEventListener('click', ()=>{
+                tabs.forEach(x=> x.classList.remove('active'));
+                t.classList.add('active');
+                const id = t.getAttribute('data-tab');
+                panels.forEach(p=> p.style.display = p.getAttribute('data-panel') === id ? '' : 'none');
+              }))
+            }
+            document.addEventListener('DOMContentLoaded', initTabs);
+            // also run immediately if DOM already loaded
+            setTimeout(initTabs,300);
+          })();
+        </script>
+
         <section id="sobre" className="container about">
           <h2>Sobre Espacio Orellana</h2>
           <p>Espacio pensado para la calma, la conexión con la naturaleza y la creatividad. Alojamiento y espacios para talleres y retiros.</p>
@@ -91,52 +111,82 @@ function App(){
             <p className="muted">Capacidad típica: 10-30 personas (configurable). Equipamiento disponible: proyector, pantalla, sistema de sonido, mantas y cojines para prácticas, y cocina equipada para demostraciones culinarias.</p>
           </div>
 
-          <div className="events-grid">
-            <article className="card event-card">
-              <h3>Talleres Holísticos</h3>
-              <p>Espacios tranquilos para prácticas de yoga, reiki y meditación. Ideal para facilitadores que buscan un entorno natural y silencioso.</p>
-              <ul>
-                <li>Espacio interior climatizado</li>
-                <li>Zona exterior para sesiones al aire libre</li>
-                <li>Apoyo logístico y contacto con terapeutas locales</li>
-              </ul>
-            </article>
-
-            <article className="card event-card">
-              <h3>Retiros de Bienestar</h3>
-              <p>Retiros de fin de semana o una semana con alojamiento, comidas saludables y programación personalizada.</p>
-              <ul>
-                <li>Planes con pensión completa</li>
-                <li>Actividades: meditación, caminatas guiadas y talleres</li>
-                <li>Opcional: sesiones individuales (masajes, reiki)</li>
-              </ul>
-            </article>
-
-            <article className="card event-card">
-              <h3>Talleres Culinarios</h3>
-              <p>Clases prácticas con ingredientes de la huerta y recetas autóctonas, pensadas para grupos reducidos y experiencias sensoriales.</p>
-              <ul>
-                <li>Demostración + degustación</li>
-                <li>Menús personalizados y opciones vegetarianas</li>
-                <li>Capacidad de cocina para clases prácticas</li>
-              </ul>
-            </article>
-
-            <article className="card event-card">
-              <h3>Eventos Creativos & Culturales</h3>
-              <p>Espacios para presentaciones, lecturas, residencias artísticas y encuentros comunitarios.</p>
-              <ul>
-                <li>Acústica cuidada para música en vivo</li>
-                <li>Apoyo en logística y difusión local</li>
-                <li>Espacios modulables según formato</li>
-              </ul>
-            </article>
+          <div className="events-tabs">
+            <button className="tab active" data-tab="resumen">Resumen</button>
+            <button className="tab" data-tab="holisticos">Talleres Holísticos</button>
+            <button className="tab" data-tab="retiros">Retiros</button>
+            <button className="tab" data-tab="culinarios">Talleres Culinarios</button>
+            <button className="tab" data-tab="cultural">Creativo & Cultural</button>
           </div>
 
-          <div className="events-cta card">
-            <h3>Solicita una cotización</h3>
-            <p>Envía tu propuesta con fechas aproximadas, número de participantes y necesidades (catering, equipos, salas). Te responderemos con opciones de paquetes y presupuesto.</p>
-            <a className="btn primary" href="#contacto">Quiero organizar un evento</a>
+          <div className="events-content">
+            <div className="tab-panel" data-panel="resumen">
+              <div className="card">
+                <h3>Resumen de servicios para eventos</h3>
+                <p>Ofrecemos paquetes flexibles que incluyen alojamiento, uso de espacios comunes, apoyo logístico y opciones de alimentación con productos locales. Ideal para facilitadores, organizaciones y grupos creativos que buscan una experiencia inmersiva junto al mar.</p>
+                <p className="muted">Duración típica: 1 fin de semana — 7 días. Posibilidad de adaptaciones según necesidades.</p>
+              </div>
+            </div>
+
+            <div className="tab-panel" data-panel="holisticos" style={{display:'none'}}>
+              <div className="events-grid">
+                <article className="card event-card">
+                  <h3>Taller de Yoga y Meditación</h3>
+                  <p>Espacios tranquilos y materiales para sesiones diarias de práctica y meditación guiada.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+                <article className="card event-card">
+                  <h3>Sesión de Reiki Grupal</h3>
+                  <p>Facilitadores y salas individuales para trabajos terapéuticos.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+              </div>
+            </div>
+
+            <div className="tab-panel" data-panel="retiros" style={{display:'none'}}>
+              <div className="events-grid">
+                <article className="card event-card">
+                  <h3>Retiro de Bienestar 3 días</h3>
+                  <p>Programa con alojamiento, comidas saludables y actividades guiadas.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+                <article className="card event-card">
+                  <h3>Retiro Intensivo</h3>
+                  <p>Semanas temáticas con facilitadores invitados y programación especializada.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+              </div>
+            </div>
+
+            <div className="tab-panel" data-panel="culinarios" style={{display:'none'}}>
+              <div className="events-grid">
+                <article className="card event-card">
+                  <h3>Taller de Cocina Autóctona</h3>
+                  <p>Manos a la obra con ingredientes de la huerta y técnicas locales.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+                <article className="card event-card">
+                  <h3>Demostración + Degustación</h3>
+                  <p>Clases con degustación y maridaje local.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+              </div>
+            </div>
+
+            <div className="tab-panel" data-panel="cultural" style={{display:'none'}}>
+              <div className="events-grid">
+                <article className="card event-card">
+                  <h3>Encuentros Creativos</h3>
+                  <p>Residencias, lecturas, presentaciones y encuentros comunitarios con apoyo en difusión.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+                <article className="card event-card">
+                  <h3>Conciertos / Pequeños Festivales</h3>
+                  <p>Espacio adaptable para eventos musicales y presentaciones en vivo.</p>
+                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                </article>
+              </div>
+            </div>
           </div>
         </section>
 
