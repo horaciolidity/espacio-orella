@@ -1,20 +1,48 @@
-# Espacio Orella — Sitio web
+# Espacio Orellana — Sitio (Vite + React)
 
-Sitio web estático para Espacio Orella (Barrancas, Puerto de San Antonio, Chile). Diseñado para promover eventos, talleres, experiencias de bienestar y alojamiento.
+Este repositorio contiene una versión inicial del sitio para Espacio Orellana, ahora estructurada como una aplicación con Vite + React.
 
-Archivos creados:
+Archivos y carpetas clave:
 
-- `index.html` — plantilla principal con todas las secciones.
-- `css/style.css` — estilos responsivos y paleta de colores.
-- `js/script.js` — interactividad: formulario y smooth scroll.
+- [index.html](index.html) — plantilla Vite que monta la app React.
+- [package.json](package.json) — scripts y dependencias.
+- [vite.config.js](vite.config.js) — configuración de Vite.
+- [src/App.jsx](src/App.jsx) — componente principal con secciones.
+- [src/main.jsx](src/main.jsx) — entrada React.
+- [src/index.css](src/index.css) — estilos globales (paleta: verde oscuro y blanco).
+- [public/assets/photos](public/assets/photos) — carpeta para subir tus fotos de galería.
 
-Cómo ver el sitio:
+Cómo ejecutar (local):
 
-1. Abrir `index.html` en un navegador moderno.
+1. Instala dependencias:
 
-Notas y siguientes pasos sugeridos:
+```bash
+npm install
+```
 
-- Reemplazar imágenes de muestra por fotos propias en `index.html` o en una carpeta `assets`.
-- Actualizar datos de contacto reales (teléfono y email).
-- Para formulario real, integrar un backend o un servicio como Formspree o Netlify Forms.
-# espacio-orella
+2. Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+3. Abre la URL que muestre Vite (por defecto http://localhost:5173).
+
+Dónde poner las fotos:
+
+Coloca las imágenes de la galería en `public/assets/photos`. En `src/App.jsx` hay referencias de ejemplo a `/assets/photos/photo1.jpg` etc. Nombres sugeridos:
+
+- `public/assets/photos/hero.jpg` — imagen hero (opcional)
+- `public/assets/photos/photo1.jpg`, `photo2.jpg`, ... — imágenes de galería
+
+Estilo y paleta:
+
+- Color principal: verde oscuro (`#114033`)
+- Fondos/textos claros: blanco
+
+Siguientes pasos sugeridos:
+
+- Reemplazar o ajustar el contenido en `src/App.jsx` con textos y fotos definitivas.
+- Conectar el formulario a un servicio (Formspree, Netlify Forms) o añadir un backend.
+- Personalizar tipografías y optimizar accesibilidad.
+
