@@ -2,25 +2,25 @@ import React, { useEffect, useState } from 'react'
 import Calendar from './components/Calendar'
 import SocialLinks from './components/SocialLinks'
 
-function App(){
+function App() {
   const [theme, setTheme] = useState(() => {
-    try{
+    try {
       return localStorage.getItem('theme') || 'light'
-    }catch(e){
+    } catch (e) {
       return 'light'
     }
   })
 
-  useEffect(()=>{
+  useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    try{ localStorage.setItem('theme', theme) }catch(e){}
-  },[theme])
+    try { localStorage.setItem('theme', theme) } catch (e) { }
+  }, [theme])
 
-  const toggleTheme = ()=> setTheme(t=> t === 'light' ? 'dark' : 'light')
+  const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
 
   const [activeTab, setActiveTab] = useState('resumen')
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
     const name = form.get('name');
@@ -95,11 +95,11 @@ function App(){
           </div>
 
           <div className="events-tabs">
-            <button className={`tab ${activeTab === 'resumen' ? 'active' : ''}`} onClick={()=> setActiveTab('resumen')}>Resumen</button>
-            <button className={`tab ${activeTab === 'holisticos' ? 'active' : ''}`} onClick={()=> setActiveTab('holisticos')}>Talleres Holísticos</button>
-            <button className={`tab ${activeTab === 'retiros' ? 'active' : ''}`} onClick={()=> setActiveTab('retiros')}>Retiros</button>
-            <button className={`tab ${activeTab === 'culinarios' ? 'active' : ''}`} onClick={()=> setActiveTab('culinarios')}>Talleres Culinarios</button>
-            <button className={`tab ${activeTab === 'cultural' ? 'active' : ''}`} onClick={()=> setActiveTab('cultural')}>Creativo & Cultural</button>
+            <button className={`tab ${activeTab === 'resumen' ? 'active' : ''}`} data-type="resumen" onClick={() => setActiveTab('resumen')}>Resumen</button>
+            <button className={`tab ${activeTab === 'holisticos' ? 'active' : ''}`} data-type="holisticos" onClick={() => setActiveTab('holisticos')}>Talleres Holísticos</button>
+            <button className={`tab ${activeTab === 'retiros' ? 'active' : ''}`} data-type="retiros" onClick={() => setActiveTab('retiros')}>Retiros</button>
+            <button className={`tab ${activeTab === 'culinarios' ? 'active' : ''}`} data-type="culinarios" onClick={() => setActiveTab('culinarios')}>Talleres Culinarios</button>
+            <button className={`tab ${activeTab === 'cultural' ? 'active' : ''}`} data-type="cultural" onClick={() => setActiveTab('cultural')}>Creativo & Cultural</button>
           </div>
 
           <div className="events-content">
@@ -113,60 +113,60 @@ function App(){
 
             {activeTab === 'holisticos' && (
               <div className="events-grid">
-                <article className="card event-card">
+                <article className="card event-card" data-type="holisticos">
                   <h3>Taller de Yoga y Meditación</h3>
                   <p>Espacios tranquilos y materiales para sesiones diarias de práctica y meditación guiada.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
-                <article className="card event-card">
+                <article className="card event-card" data-type="holisticos">
                   <h3>Sesión de Reiki Grupal</h3>
                   <p>Facilitadores y salas individuales para trabajos terapéuticos.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
             )}
 
             {activeTab === 'retiros' && (
               <div className="events-grid">
-                <article className="card event-card">
+                <article className="card event-card" data-type="retiros">
                   <h3>Retiro de Bienestar 3 días</h3>
                   <p>Programa con alojamiento, comidas saludables y actividades guiadas.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
-                <article className="card event-card">
+                <article className="card event-card" data-type="retiros">
                   <h3>Retiro Intensivo</h3>
                   <p>Semanas temáticas con facilitadores invitados y programación especializada.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
             )}
 
             {activeTab === 'culinarios' && (
               <div className="events-grid">
-                <article className="card event-card">
+                <article className="card event-card" data-type="culinarios">
                   <h3>Taller de Cocina Autóctona</h3>
                   <p>Manos a la obra con ingredientes de la huerta y técnicas locales.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
-                <article className="card event-card">
+                <article className="card event-card" data-type="culinarios">
                   <h3>Demostración + Degustación</h3>
                   <p>Clases con degustación y maridaje local.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
             )}
 
             {activeTab === 'cultural' && (
               <div className="events-grid">
-                <article className="card event-card">
+                <article className="card event-card" data-type="cultural">
                   <h3>Encuentros Creativos</h3>
                   <p>Residencias, lecturas, presentaciones y encuentros comunitarios con apoyo en difusión.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
-                <article className="card event-card">
+                <article className="card event-card" data-type="cultural">
                   <h3>Conciertos / Pequeños Festivales</h3>
                   <p>Espacio adaptable para eventos musicales y presentaciones en vivo.</p>
-                  <button className="btn contratar" onClick={()=> window.location.hash = '#contacto'}>Contratar</button>
+                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
                 </article>
               </div>
             )}
@@ -187,8 +187,8 @@ function App(){
           <h2>Galería</h2>
           <p>Coloca tus fotos en <strong>/public/assets/photos</strong> y aparecerán aquí (referencias estáticas).</p>
           <div className="grid-gallery">
-            <div className="card media"><img src="/fotos/3.jpeg" alt="foto 3"/></div>
-            <div className="card media"><img src="/fotos/4.jpeg" alt="foto 4"/></div>
+            <div className="card media"><img src="/fotos/3.jpeg" alt="foto 3" /></div>
+            <div className="card media"><img src="/fotos/4.jpeg" alt="foto 4" /></div>
           </div>
         </section>
 
@@ -220,7 +220,7 @@ function App(){
             </form>
           </div>
 
-          <div className="card contact-info" style={{marginTop:'1rem'}}>
+          <div className="card contact-info" style={{ marginTop: '1rem' }}>
             <p><strong>Ubicación:</strong> Barrancas, Puerto de San Antonio, Chile</p>
             <p><strong>Email:</strong> contacto@espacioorella.cl</p>
           </div>
