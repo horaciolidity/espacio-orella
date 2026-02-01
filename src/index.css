@@ -19,7 +19,7 @@ body{font-family:Inter, system-ui, Arial, Helvetica, sans-serif;margin:0;color:v
 .nav a{margin-left:1rem;color:var(--green-dark);text-decoration:none}
 .nav a.cta{background:var(--green-dark);color:var(--white);padding:0.4rem 0.6rem;border-radius:6px}
 
-.hero{background-image:linear-gradient(rgba(17,64,51,0.65), rgba(17,64,51,0.25)), url('/assets/photos/hero.jpg');background-size:cover;background-position:center;color:var(--white);padding:6rem 0}
+.hero{background-image:linear-gradient(135deg, rgba(15,59,43,0.75), rgba(156,207,176,0.25)), url('/assets/photos/photo2.jpg');background-size:cover;background-position:center;color:var(--white);padding:6rem 0}
 .hero h1{font-size:2rem;margin:0 0 0.5rem}
 .subtitle{opacity:0.95}
 .hero-ctas{margin-top:1rem}
@@ -49,13 +49,19 @@ body{font-family:Inter, system-ui, Arial, Helvetica, sans-serif;margin:0;color:v
 
 /* Dark theme overrides */
 :root[data-theme="dark"]{
-  --bg:#07110d;
-  --text:#dbeede;
-  --card:#0b1b14;
+  --bg: linear-gradient(135deg, #07110d 0%, #0b1b14 40%, #000000 100%);
+  --bg-solid: #07110d;
+  --text:#e6f6ec;
+  --card:#0b2219;
+  --muted:#9fbfaa;
+  --accent:#6aa882;
 }
 
 .body-root{}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,Helvetica,sans-serif;transition:background .25s,color .25s}
+.body-root{}
+/* Page background uses gradients mixing dark green, light green, white/black depending on theme */
+body{background: linear-gradient(135deg, var(--green-dark), var(--accent), var(--bg));color:var(--text);font-family:Inter,system-ui,Arial,Helvetica,sans-serif;transition:background .25s,color .25s}
+.theme-dark body{background: var(--bg);}
 .site-header, .container{color:var(--text)}
 
 .brand{font-family:'Playfair Display', serif;letter-spacing:0.6px;font-size:1.25rem}
@@ -90,6 +96,14 @@ body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,He
 /* Card component */
 .card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 24px rgba(12,44,34,0.06);transition:transform .18s,box-shadow .18s}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(12,44,34,0.09)}
+.brand-logo{width:44px;height:44px;object-fit:cover;border-radius:8px;margin-right:0.6rem;vertical-align:middle}
+.brand-text{font-family:'Playfair Display',serif;font-weight:600}
+
+/* Ensure dark theme readable backgrounds for cards and text */
+:root[data-theme="dark"] .card{background:var(--card)}
+:root[data-theme="dark"] .site-header, :root[data-theme="dark"] .container{color:var(--text)}
+:root[data-theme="dark"] .subtitle, :root[data-theme="dark"] .contact p{color:var(--muted)}
+
 .card .media img{width:100%;height:180px;object-fit:cover;border-radius:8px}
 .card h3{margin-top:0}
 .card p{color:var(--muted)}
