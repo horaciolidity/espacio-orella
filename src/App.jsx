@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Calendar from './components/Calendar'
 import SocialLinks from './components/SocialLinks'
+import ChatBot from './components/ChatBot'
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -318,6 +319,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <ChatBot />
     </div>
   )
 }
