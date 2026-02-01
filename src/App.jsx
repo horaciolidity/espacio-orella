@@ -84,14 +84,60 @@ function App(){
           </div>
         </section>
 
-        <section id="eventos" className="container">
-          <h2>Eventos y Contrataciones</h2>
-          <ul className="services-list">
-            <li className="card">Talleres holísticos</li>
-            <li className="card">Retiros de bienestar</li>
-            <li className="card">Talleres de cocina autóctona</li>
-            <li className="card">Eventos creativos y culturales</li>
-          </ul>
+        <section id="eventos" className="container events-section">
+          <div className="events-intro card">
+            <h2>Eventos y Contrataciones</h2>
+            <p>Espacio Orellana ofrece un entorno versátil para eventos íntimos y medianos: talleres holísticos, retiros de bienestar, talleres de cocina autóctona, residencias creativas y encuentros culturales. Nuestra propuesta combina alojamiento para participantes, espacios interiores y al aire libre, huerta propia y opciones de catering local.</p>
+            <p className="muted">Capacidad típica: 10-30 personas (configurable). Equipamiento disponible: proyector, pantalla, sistema de sonido, mantas y cojines para prácticas, y cocina equipada para demostraciones culinarias.</p>
+          </div>
+
+          <div className="events-grid">
+            <article className="card event-card">
+              <h3>Talleres Holísticos</h3>
+              <p>Espacios tranquilos para prácticas de yoga, reiki y meditación. Ideal para facilitadores que buscan un entorno natural y silencioso.</p>
+              <ul>
+                <li>Espacio interior climatizado</li>
+                <li>Zona exterior para sesiones al aire libre</li>
+                <li>Apoyo logístico y contacto con terapeutas locales</li>
+              </ul>
+            </article>
+
+            <article className="card event-card">
+              <h3>Retiros de Bienestar</h3>
+              <p>Retiros de fin de semana o una semana con alojamiento, comidas saludables y programación personalizada.</p>
+              <ul>
+                <li>Planes con pensión completa</li>
+                <li>Actividades: meditación, caminatas guiadas y talleres</li>
+                <li>Opcional: sesiones individuales (masajes, reiki)</li>
+              </ul>
+            </article>
+
+            <article className="card event-card">
+              <h3>Talleres Culinarios</h3>
+              <p>Clases prácticas con ingredientes de la huerta y recetas autóctonas, pensadas para grupos reducidos y experiencias sensoriales.</p>
+              <ul>
+                <li>Demostración + degustación</li>
+                <li>Menús personalizados y opciones vegetarianas</li>
+                <li>Capacidad de cocina para clases prácticas</li>
+              </ul>
+            </article>
+
+            <article className="card event-card">
+              <h3>Eventos Creativos & Culturales</h3>
+              <p>Espacios para presentaciones, lecturas, residencias artísticas y encuentros comunitarios.</p>
+              <ul>
+                <li>Acústica cuidada para música en vivo</li>
+                <li>Apoyo en logística y difusión local</li>
+                <li>Espacios modulables según formato</li>
+              </ul>
+            </article>
+          </div>
+
+          <div className="events-cta card">
+            <h3>Solicita una cotización</h3>
+            <p>Envía tu propuesta con fechas aproximadas, número de participantes y necesidades (catering, equipos, salas). Te responderemos con opciones de paquetes y presupuesto.</p>
+            <a className="btn primary" href="#contacto">Quiero organizar un evento</a>
+          </div>
         </section>
 
         <section id="bienestar" className="container wellbeing">
