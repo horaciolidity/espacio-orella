@@ -19,6 +19,7 @@ function App() {
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
 
   const [activeTab, setActiveTab] = useState('resumen')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,19 +39,34 @@ function App() {
           <img src="/fotos/1.jpeg" alt="Espacio Orellana" className="brand-logo" />
           <span className="brand-text">Espacio Orellana</span>
         </div>
-        <nav className="nav">
-          <a href="#sobre">Sobre</a>
-          <a href="#eventos">Eventos</a>
-          <a href="#bienestar">Bienestar</a>
-          <a href="#galeria">Galería</a>
-          <a href="#contacto" className="cta">Consultar disponibilidad</a>
+
+        <button
+          className="menu-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Menú"
+        >
+          {isMenuOpen ? '✕' : '☰'}
+        </button>
+
+        <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
+          <a href="#sobre" onClick={() => setIsMenuOpen(false)}>Sobre</a>
+          <a href="#eventos" onClick={() => setIsMenuOpen(false)}>Eventos</a>
+          <a href="#bienestar" onClick={() => setIsMenuOpen(false)}>Bienestar</a>
+          <a href="#galeria" onClick={() => setIsMenuOpen(false)}>Galería</a>
+          <a href="#contacto" className="cta" onClick={() => setIsMenuOpen(false)}>Consultar disponibilidad</a>
+
+          <div className="mobile-only header-social">
+            <SocialLinks />
+          </div>
         </nav>
+
         <div className="theme-toggle">
           <button onClick={toggleTheme} aria-label="Alternar tema">
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
         </div>
-        <div className="header-social">
+
+        <div className="desktop-only header-social">
           <SocialLinks />
         </div>
       </header>
