@@ -3,6 +3,9 @@
   --white:#ffffff;
   --muted:#6b6b6b;
   --max-width:1100px;
+  --bg: var(--white);
+  --text: var(--green-dark);
+  --card: #f7f7f6;
 }
 *{box-sizing:border-box}
 body{font-family:Inter, system-ui, Arial, Helvetica, sans-serif;margin:0;color:var(--green-dark);background:var(--white);line-height:1.6}
@@ -39,3 +42,25 @@ body{font-family:Inter, system-ui, Arial, Helvetica, sans-serif;margin:0;color:v
   .grid-gallery{grid-template-columns:repeat(2,1fr)}
   .well-grid{grid-template-columns:1fr}
 }
+
+/* Dark theme overrides */
+:root[data-theme="dark"]{
+  --bg:#07110d;
+  --text:#dbeede;
+  --card:#0b1b14;
+}
+
+body{background:var(--bg);color:var(--text)}
+.site-header, .container{color:var(--text)}
+
+/* Calendar styles */
+.calendar{max-width:520px;margin-top:1rem}
+.cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem}
+.cal-header button{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:0.25rem 0.4rem;border-radius:6px}
+.cal-title{font-weight:600}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-weekday{font-size:0.75rem;text-align:center;color:var(--muted)}
+.cal-day{height:44px;border-radius:8px;border:0;background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center}
+.cal-day.active{cursor:pointer}
+.cal-day:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,0.06)}
+

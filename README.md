@@ -46,3 +46,19 @@ Siguientes pasos sugeridos:
 - Conectar el formulario a un servicio (Formspree, Netlify Forms) o añadir un backend.
 - Personalizar tipografías y optimizar accesibilidad.
 
+Nuevas características añadidas:
+
+- Modo claro / oscuro: botón en la cabecera con persistencia en `localStorage`.
+- Calendario de visitas: selecciona una fecha y se abrirá tu cliente de correo para solicitar la visita.
+
+Para probar las nuevas características:
+
+1. Ejecuta el servidor de desarrollo:
+
+```bash
+npm install
+npm run dev
+```
+
+2. Abre la app y prueba el botón del tema en la cabecera y la sección "Calendario de visitas".
+

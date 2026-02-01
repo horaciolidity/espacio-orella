@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Calendar from './components/Calendar'
 
 function App(){
+  const [theme, setTheme] = useState(() => {
+    try{
+      return localStorage.getItem('theme') || 'light'
+    }catch(e){
+      return 'light'
+    }
+  })
+
+  useEffect(()=>{
+    document.documentElement.setAttribute('data-theme', theme)
+    try{ localStorage.setItem('theme', theme) }catch(e){}
+  },[theme])
+
+  const toggleTheme = ()=> setTheme(t=> t === 'light' ? 'dark' : 'light')
+
   const handleSubmit = (e) =>{
     e.preventDefault();
     const form = new FormData(e.target);
@@ -23,6 +39,11 @@ function App(){
           <a href="#galeria">Galería</a>
           <a href="#contacto" className="cta">Consultar disponibilidad</a>
         </nav>
+        <div className="theme-toggle">
+          <button onClick={toggleTheme} aria-label="Alternar tema">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+        </div>
       </header>
 
       <main>
@@ -85,6 +106,12 @@ function App(){
             <img src="/assets/photos/photo3.jpg" alt="foto 3"/>
             <img src="/assets/photos/photo4.jpg" alt="foto 4"/>
           </div>
+        </section>
+
+        <section id="calendario" className="container calendar-section">
+          <h2>Calendario de visitas</h2>
+          <p>Selecciona una fecha para solicitar una visita. Al hacer clic se abrirá tu cliente de correo con la solicitud prellenada.</p>
+          <Calendar />
         </section>
 
         <section id="contacto" className="container contact">
