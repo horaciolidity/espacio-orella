@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Calendar from './components/Calendar'
+import SocialLinks from './components/SocialLinks'
 
 function App(){
   const [theme, setTheme] = useState(() => {
@@ -43,6 +44,9 @@ function App(){
           <button onClick={toggleTheme} aria-label="Alternar tema">
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
+        </div>
+        <div className="header-social">
+          <SocialLinks />
         </div>
       </header>
 
@@ -143,7 +147,10 @@ function App(){
 
       <footer className="site-footer">
         <div className="container">
-          <p>© {new Date().getFullYear()} Espacio Orellana</p>
+          <div className="footer-inner">
+            <p>© {new Date().getFullYear()} Espacio Orellana</p>
+            <SocialLinks />
+          </div>
         </div>
       </footer>
     </div>
