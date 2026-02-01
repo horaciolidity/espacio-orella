@@ -66,15 +66,15 @@ function App(){
           <h2>Sobre Espacio Orellana</h2>
           <p>Espacio pensado para la calma, la conexión con la naturaleza y la creatividad. Alojamiento y espacios para talleres y retiros.</p>
           <div className="about-grid">
-            <div>
+            <div className="card">
               <h3>Alojamiento</h3>
               <p>5 habitaciones privadas con baño compartido y espacios comunitarios.</p>
             </div>
-            <div>
+            <div className="card">
               <h3>Comodidades</h3>
               <p>Cocina compartida, huerta propia y áreas de descanso.</p>
             </div>
-            <div>
+            <div className="card">
               <h3>Ubicación</h3>
               <p>Barrancas, cerca del Puerto de San Antonio — fácil acceso desde Santiago.</p>
             </div>
@@ -84,20 +84,20 @@ function App(){
         <section id="eventos" className="container">
           <h2>Eventos y Contrataciones</h2>
           <ul className="services-list">
-            <li>Talleres holísticos</li>
-            <li>Retiros de bienestar</li>
-            <li>Talleres de cocina autóctona</li>
-            <li>Eventos creativos y culturales</li>
+            <li className="card">Talleres holísticos</li>
+            <li className="card">Retiros de bienestar</li>
+            <li className="card">Talleres de cocina autóctona</li>
+            <li className="card">Eventos creativos y culturales</li>
           </ul>
         </section>
 
         <section id="bienestar" className="container wellbeing">
           <h2>Bienestar y Experiencias</h2>
           <div className="well-grid">
-            <div>Reiki</div>
-            <div>Meditación</div>
-            <div>Masajes</div>
-            <div>Sanación individual</div>
+            <div className="card">Reiki</div>
+            <div className="card">Meditación</div>
+            <div className="card">Masajes</div>
+            <div className="card">Sanación individual</div>
           </div>
         </section>
 
@@ -105,10 +105,10 @@ function App(){
           <h2>Galería</h2>
           <p>Coloca tus fotos en <strong>/public/assets/photos</strong> y aparecerán aquí (referencias estáticas).</p>
           <div className="grid-gallery">
-            <img src="/assets/photos/photo1.jpg" alt="foto 1"/>
-            <img src="/assets/photos/photo2.jpg" alt="foto 2"/>
-            <img src="/assets/photos/photo3.jpg" alt="foto 3"/>
-            <img src="/assets/photos/photo4.jpg" alt="foto 4"/>
+            <div className="card media"><img src="/assets/photos/photo1.jpg" alt="foto 1"/></div>
+            <div className="card media"><img src="/assets/photos/photo2.jpg" alt="foto 2"/></div>
+            <div className="card media"><img src="/assets/photos/photo3.jpg" alt="foto 3"/></div>
+            <div className="card media"><img src="/assets/photos/photo4.jpg" alt="foto 4"/></div>
           </div>
         </section>
 
@@ -120,25 +120,27 @@ function App(){
 
         <section id="contacto" className="container contact">
           <h2>Contacto y Reservas</h2>
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="field">
-              <label>Nombre</label>
-              <input name="name" required />
-            </div>
-            <div className="field">
-              <label>Email</label>
-              <input name="email" type="email" required />
-            </div>
-            <div className="field">
-              <label>Mensaje</label>
-              <textarea name="message" rows="5" required></textarea>
-            </div>
-            <div className="form-actions">
-              <button className="btn primary" type="submit">Enviar consulta</button>
-            </div>
-          </form>
+          <div className="card">
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="field">
+                <label>Nombre</label>
+                <input name="name" required />
+              </div>
+              <div className="field">
+                <label>Email</label>
+                <input name="email" type="email" required />
+              </div>
+              <div className="field">
+                <label>Mensaje</label>
+                <textarea name="message" rows="5" required></textarea>
+              </div>
+              <div className="form-actions">
+                <button className="btn primary" type="submit">Enviar consulta</button>
+              </div>
+            </form>
+          </div>
 
-          <div className="contact-info">
+          <div className="card contact-info" style={{marginTop:'1rem'}}>
             <p><strong>Ubicación:</strong> Barrancas, Puerto de San Antonio, Chile</p>
             <p><strong>Email:</strong> contacto@espacioorella.cl</p>
           </div>

@@ -62,3 +62,15 @@ npm run dev
 
 2. Abre la app y prueba el botón del tema en la cabecera y la sección "Calendario de visitas".
 
+Carpeta para fotos:
+
+- Sube tus imágenes a `public/assets/photos`. Mantén nombres simples como `hero.jpg`, `photo1.jpg`, `photo2.jpg`.
+
+Mejoras realizadas en esta ronda:
+
+- Paleta y tipografías mejoradas (Playfair Display + Inter).
+- Contenedores `card` en secciones para aspecto profesional.
+- Iconos sociales en cabecera y pie.
+- Contraste oscuro arreglado para que los textos sean legibles en modo oscuro.
+
+
