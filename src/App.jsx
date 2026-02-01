@@ -16,6 +16,19 @@ function App() {
     try { localStorage.setItem('theme', theme) } catch (e) { }
   }, [theme])
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appeared');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, [activeTab]); // observer depends on tab content changing
+
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
 
   const [activeTab, setActiveTab] = useState('resumen')
@@ -88,15 +101,15 @@ function App() {
           <h2>Sobre Espacio Orellana</h2>
           <p>Espacio pensado para la calma, la conexión con la naturaleza y la creatividad. Alojamiento y espacios para talleres y retiros.</p>
           <div className="about-grid">
-            <div className="card">
+            <div className="card animate-on-scroll">
               <h3>Alojamiento</h3>
               <p>5 habitaciones privadas con baño compartido y espacios comunitarios.</p>
             </div>
-            <div className="card">
+            <div className="card animate-on-scroll">
               <h3>Comodidades</h3>
               <p>Cocina compartida, huerta propia y áreas de descanso.</p>
             </div>
-            <div className="card">
+            <div className="card animate-on-scroll">
               <h3>Ubicación</h3>
               <p>Barrancas, cerca del Puerto de San Antonio — fácil acceso desde Santiago.</p>
             </div>
@@ -189,13 +202,32 @@ function App() {
           </div>
         </section>
 
-        <section id="bienestar" className="container wellbeing">
-          <h2>Bienestar y Experiencias</h2>
+        <section id="bienestar" className="wellbeing-section container">
+          <div className="section-header">
+            <h2>Bienestar y Experiencias</h2>
+            <p className="section-intro">Descubre un refugio para el alma. Ofrecemos terapias y prácticas diseñadas para restaurar el equilibrio, la paz interior y la vitalidad en un entorno natural único.</p>
+          </div>
           <div className="well-grid">
-            <div className="card">Reiki</div>
-            <div className="card">Meditación</div>
-            <div className="card">Masajes</div>
-            <div className="card">Sanación individual</div>
+            <article className="well-card animate-on-scroll">
+              <div className="well-icon">✨</div>
+              <h3>Reiki Holístico</h3>
+              <p>Canalización de energía vital para armonizar cuerpo y mente, reduciendo el estrés y promoviendo la autosanación profunda.</p>
+            </article>
+            <article className="well-card animate-on-scroll">
+              <div className="well-icon">🧘</div>
+              <h3>Meditación Guiada</h3>
+              <p>Sesiones de mindfulness y respiración consciente frente al mar, diseñadas para cultivar la presencia y la claridad mental.</p>
+            </article>
+            <article className="well-card animate-on-scroll">
+              <div className="well-icon">💆</div>
+              <h3>Masajes Terapéuticos</h3>
+              <p>Técnicas integrales de relajación y descontracturantes con aceites esenciales orgánicos de nuestra propia huerta.</p>
+            </article>
+            <article className="well-card animate-on-scroll">
+              <div className="well-icon">🏺</div>
+              <h3>Sanación Sonora</h3>
+              <p>Baños de bosque y cuencos tibetanos que utilizan la vibración para inducir estados de relajación profunda y renovación.</p>
+            </article>
           </div>
         </section>
 

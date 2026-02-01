@@ -21,6 +21,13 @@
   --ev-culinarios: #D9A05B;
   --ev-cultural: #6E85B7;
   --ev-bg-alpha: 0.05;
+  --header-height: 72px;
+
+  /* Wellbeing Palette */
+  --wb-bg: #fdfcf0;
+  --wb-accent: #7a9d8c;
+  --wb-text: #2d3e35;
+  --wb-card: #ffffff;
 }
 
 :root[data-theme="dark"] {
@@ -483,12 +490,121 @@ body {
   }
 }
 
-/* Wellbeing */
+/* Wellbeing Section */
+.wellbeing-section {
+  padding: 6rem 1.25rem;
+  background: var(--wb-bg);
+  border-radius: 40px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+:root[data-theme="dark"] .wellbeing-section {
+  background: rgba(122, 157, 140, 0.05);
+  border: 1px solid rgba(122, 157, 140, 0.1);
+}
+
+.section-header {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.section-intro {
+  font-size: 1.2rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .well-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.well-card {
+  background: var(--wb-card);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+:root[data-theme="dark"] .well-card {
+  background: var(--card);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.well-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(122, 157, 140, 0.15);
+  border-color: var(--wb-accent);
+}
+
+.well-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: rgba(122, 157, 140, 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.well-card:hover .well-icon {
+  background: var(--wb-accent);
+  transform: rotate(10deg) scale(1.1);
+  filter: grayscale(0);
+}
+
+.well-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--wb-text);
+}
+
+:root[data-theme="dark"] .well-card h3 {
+  color: var(--text);
+}
+
+.well-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.appeared {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .wellbeing-section {
+    padding: 4rem 1rem;
+    border-radius: 20px;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+  }
+
+  .well-card {
+    padding: 2rem 1.5rem;
+  }
 }
 
 /* Calendar Section */
