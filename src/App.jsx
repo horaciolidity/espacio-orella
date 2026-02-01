@@ -67,25 +67,6 @@ function App(){
           </div>
         </section>
 
-        <script>
-          // Tabs behavior: simple DOM-based, progressive enhancement
-          (function(){
-            if(typeof window === 'undefined') return;
-            function initTabs(){
-              const tabs = document.querySelectorAll('.events-tabs .tab');
-              const panels = document.querySelectorAll('.events-content .tab-panel');
-              tabs.forEach(t=> t.addEventListener('click', ()=>{
-                tabs.forEach(x=> x.classList.remove('active'));
-                t.classList.add('active');
-                const id = t.getAttribute('data-tab');
-                panels.forEach(p=> p.style.display = p.getAttribute('data-panel') === id ? '' : 'none');
-              }))
-            }
-            document.addEventListener('DOMContentLoaded', initTabs);
-            // also run immediately if DOM already loaded
-            setTimeout(initTabs,300);
-          })();
-        </script>
 
         <section id="sobre" className="container about">
           <h2>Sobre Espacio Orellana</h2>
