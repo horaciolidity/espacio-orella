@@ -33,7 +33,7 @@ function App(){
     <div className="app">
       <header className="site-header container">
         <div className="brand">
-          <img src="/assets/photos/photo1.jpg" alt="Espacio Orellana" className="brand-logo" />
+          <img src="/fotos/1.jpeg" alt="Espacio Orellana" className="brand-logo" />
           <span className="brand-text">Espacio Orellana</span>
         </div>
         <nav className="nav">
@@ -108,8 +108,8 @@ function App(){
           <h2>Galería</h2>
           <p>Coloca tus fotos en <strong>/public/assets/photos</strong> y aparecerán aquí (referencias estáticas).</p>
           <div className="grid-gallery">
-            <div className="card media"><img src="/assets/photos/photo3.jpg" alt="foto 3"/></div>
-            <div className="card media"><img src="/assets/photos/photo4.jpg" alt="foto 4"/></div>
+            <div className="card media"><img src="/fotos/3.jpeg" alt="foto 3"/></div>
+            <div className="card media"><img src="/fotos/4.jpeg" alt="foto 4"/></div>
           </div>
         </section>
 
