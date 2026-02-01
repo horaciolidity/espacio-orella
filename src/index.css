@@ -72,7 +72,8 @@ body{font-family:Inter, system-ui, Arial, Helvetica, sans-serif;margin:0;color:v
   --card:#0b2219;
   --muted:#9fbfaa;
   --accent:#6aa882;
-  --hero-overlay: 0.18; /* lighter overlay for dark theme so image remains visible */
+  --hero-overlay: 0.0; /* transparent overlay in dark theme so image remains visible */
+  --hero-overlay-second: 0.0;
 }
 
 .body-root{}
@@ -80,7 +81,6 @@ body{font-family:Inter, system-ui, Arial, Helvetica, sans-serif;margin:0;color:v
 /* Page background uses gradients mixing dark green, light green, white/black depending on theme */
 /* Light theme background: subtle layered gradient for contrast */
 body{background: linear-gradient(180deg, rgba(17,64,51,0.03) 0%, rgba(156,207,176,0.02) 40%, #ffffff 100%);color:var(--text);font-family:Inter,system-ui,Arial,Helvetica,sans-serif;transition:background .25s,color .25s}
-.theme-dark body{background: var(--bg-solid);}
 
 /* Ensure high contrast text in dark theme */
 :root[data-theme="dark"] body, :root[data-theme="dark"] .site-header, :root[data-theme="dark"] .container{background:var(--bg-solid);color:var(--text)}
