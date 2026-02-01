@@ -1,0 +1,71 @@
+:root{
+  --green-dark:#1f4d3a;
+  --green-light:#9ccfb0;
+  --white:#ffffff;
+  --muted:#6b6b6b;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:'Quicksand',system-ui,Arial,Helvetica,sans-serif;color:var(--green-dark);margin:0;line-height:1.6;background:#fff}
+.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+.site-header{background:linear-gradient(180deg,rgba(31,77,58,0.02),transparent);position:sticky;top:0;z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{font-weight:700;color:var(--green-dark);text-decoration:none;font-size:1.15rem}
+.main-nav{display:flex;gap:1rem;align-items:center}
+.main-nav a{color:var(--green-dark);text-decoration:none;padding:0.35rem 0.5rem;border-radius:6px}
+.main-nav a.cta{background:var(--green-dark);color:var(--white);padding:0.5rem 0.8rem}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
+
+.hero{position:relative;display:flex;align-items:center;min-height:60vh;color:var(--white)}
+.hero-media img{width:100%;height:60vh;object-fit:cover;filter:brightness(0.6)}
+.hero-content{position:absolute;left:0;right:0;top:20%;text-align:center;padding:0 1rem}
+.hero-content h1{font-family:'Merriweather',serif;font-weight:700;font-size:2rem;margin:0 0 0.5rem}
+.subtitle{opacity:0.95;margin-bottom:1rem}
+.btn{display:inline-block;border-radius:8px;padding:0.6rem 1rem;text-decoration:none}
+.btn.primary{background:var(--green-dark);color:var(--white)}
+.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.85);color:var(--white)}
+.hero-ctas{display:flex;gap:0.75rem;justify-content:center}
+
+.about{padding:2rem 0}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+
+.section-events,.wellbeing,.gallery,.work-cafe,.contact{padding:2rem 0}
+.services-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;list-style:none;padding:0}
+
+.well-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.well-grid article{background:var(--green-light);padding:1rem;border-radius:8px;color:var(--green-dark)}
+
+.grid-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:1rem}
+.grid-gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+
+.contact-form{display:grid;grid-template-columns:1fr 300px;gap:1rem}
+.contact-form label{display:block}
+.contact-form input,.contact-form textarea{width:100%;padding:0.5rem;border-radius:6px;border:1px solid #ddd}
+.form-actions{display:flex;gap:0.5rem}
+.contact-info{padding-top:1rem;color:var(--muted)}
+
+.site-footer{background:#f8faf8;padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .grid-gallery{grid-template-columns:repeat(2,1fr)}
+  .contact-form{grid-template-columns:1fr}
+  .hero-content h1{font-size:1.5rem}
+}
+@media(max-width:640px){
+  .main-nav{display:none}
+  .nav-toggle{display:block}
+  .grid-gallery img{height:120px}
+  .hero-media img{height:50vh}
+}
+
+/* Smooth subtle animations */
+.hero-content, .about, .section-events, .wellbeing, .gallery, .work-cafe, .contact{opacity:0;transform:translateY(12px);animation:fadeUp .7s ease forwards}
+.hero-content{animation-delay:0.15s}
+.about{animation-delay:0.25s}
+.section-events{animation-delay:0.35s}
+.wellbeing{animation-delay:0.45s}
+.gallery{animation-delay:0.55s}
+.contact{animation-delay:0.65s}
+@keyframes fadeUp{to{opacity:1;transform:none}}
