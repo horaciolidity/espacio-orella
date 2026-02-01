@@ -609,7 +609,182 @@ body {
 
 /* Calendar Section */
 .calendar-section {
-  padding: 4rem 1.25rem;
+  padding: 6rem 1.25rem;
+}
+
+.calendar-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.calendar-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+@media (max-width: 800px) {
+  .calendar-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calendar-main {
+  padding: 2.5rem;
+  background: var(--bg);
+}
+
+.calendar-options {
+  padding: 2.5rem;
+  background: var(--card);
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+:root[data-theme="dark"] .calendar-options {
+  border-left-color: rgba(255, 255, 255, 0.05);
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.cal-nav-btn {
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition: 0.2s;
+}
+
+.cal-nav-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.cal-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.cal-weekday {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding-bottom: 1rem;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: default;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cal-day.active {
+  cursor: pointer;
+  background: var(--card);
+}
+
+.cal-day.active:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.1);
+}
+
+.cal-day.selected {
+  background: var(--green-dark) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(15, 59, 43, 0.3);
+}
+
+.cal-day.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.service-selector label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.service-selector select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.selected-summary {
+  padding: 1rem;
+  background: rgba(122, 157, 140, 0.1);
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.selected-summary .hint {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.whatsapp-btn {
+  background: #25D366 !important;
+  color: white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem !important;
+  font-size: 1.1rem !important;
+}
+
+.whatsapp-btn:disabled {
+  background: #ccc !important;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
 }
 
 /* Contact Section */
