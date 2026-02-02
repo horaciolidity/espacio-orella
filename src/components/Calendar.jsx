@@ -36,7 +36,7 @@ function Calendar() {
     })
 
     const message = encodeURIComponent(
-      `Hola Espacio Orellana! 👋\n\nMe gustaría consultar disponibilidad para:\n📌 *${service.toUpperCase()}*\n📅 Fecha: *${dateStr}*\n\n¿Me podrían dar más información?`
+      `Hola Espacio Orella! 👋\n\nMe gustaría consultar disponibilidad para:\n📌 *${service.toUpperCase()}*\n📅 Fecha: *${dateStr}*\n\n¿Me podrían dar más información?`
     )
 
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank')

@@ -42,7 +42,7 @@ function App() {
     const name = form.get('name');
     const email = form.get('email');
     const message = form.get('message');
-    const subject = encodeURIComponent('Consulta - Espacio Orellana');
+    const subject = encodeURIComponent('Consulta - Espacio Orella');
     const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\n${message}`);
     window.location.href = `mailto:contacto@espacioorella.cl?subject=${subject}&body=${body}`;
   }
@@ -92,7 +92,7 @@ function App() {
         <section className="hero">
           <div className="hero-inner container">
             <h1>🌿 Espacio Orella</h1>
-            <p className="subtitle">Descansar, trabajar y conectar con la naturaleza en San Antonio</p>
+            <p className="subtitle">Descansa, trabaja y conecta con la naturaleza en San Antonio</p>
             <p className="hero-description">
               Un alojamiento acogedor en Barrancas, a minutos del puerto de San Antonio, donde la tranquilidad, el confort y una huerta propia se combinan para ofrecerte una experiencia auténtica. Ideal para turistas y viajeros de negocios que buscan un lugar cómodo, funcional y con alma
             </p>
@@ -136,7 +136,7 @@ function App() {
         <section id="eventos" className="container events-section">
           <div className="events-intro card">
             <h2>Eventos y Contrataciones</h2>
-            <p>Espacio Orellana ofrece un entorno versátil para eventos íntimos y medianos: talleres holísticos, retiros de bienestar, talleres de cocina autóctona, residencias creativas y encuentros culturales. Nuestra propuesta combina alojamiento para participantes, espacios interiores y al aire libre, huerta propia y opciones de catering local.</p>
+            <p>Espacio Orella ofrece un entorno versátil para eventos íntimos y medianos: talleres holísticos, retiros de bienestar, talleres de cocina autóctona, residencias creativas y encuentros culturales. Nuestra propuesta combina alojamiento para participantes, espacios interiores y al aire libre, huerta propia y opciones de catering local.</p>
             <p className="muted">Capacidad típica: 10-30 personas (configurable). Equipamiento disponible: proyector, pantalla, sistema de sonido, mantas y cojines para prácticas, y cocina equipada para demostraciones culinarias.</p>
           </div>
 
@@ -303,7 +303,7 @@ function App() {
         <section id="opiniones" className="container reviews-section">
           <div className="section-header animate-on-scroll">
             <h2>Experiencias y Ubicación</h2>
-            <p className="section-intro">Tu opinión es fundamental para nosotros. Te invitamos a compartir tu experiencia en Espacio Orellana y a visitarnos en nuestro rincón de paz en San Antonio.</p>
+            <p className="section-intro">Tu opinión es fundamental para nosotros. Te invitamos a compartir tu experiencia en Espacio Orella y a visitarnos en nuestro rincón de paz en San Antonio.</p>
           </div>
 
           <div className="reviews-layout">
@@ -312,7 +312,7 @@ function App() {
               <h3>¡Déjanos una reseña!</h3>
               <p>Si has visitado nuestro espacio, nos encantaría que compartieras tu experiencia. Tu feedback ayuda a otros a descubrir este lugar de bienestar.</p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Espacio+Orellana+Barrancas+San+Antonio"
+                href="https://www.google.com/maps/search/?api=1&query=Espacio+Orella+Barrancas+San+Antonio"
                 target="_blank"
                 rel="noreferrer"
                 className="btn primary google-btn"
@@ -323,7 +323,7 @@ function App() {
 
             <div className="map-container card animate-on-scroll">
               <iframe
-                title="Ubicación Espacio Orellana"
+                title="Ubicación Espacio Orella"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.8687353982544!2d-71.5985!3d-33.5878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzE2LjEiUyA3McKwMzUnNTQuNiJX!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl"
                 width="100%"
                 height="300"
