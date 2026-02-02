@@ -533,6 +533,41 @@ h3,
   color: var(--green-dark);
 }
 
+/* Integración mejorada para Modo Oscuro */
+:root[data-theme="dark"] .about .about-grid .card:nth-child(1) {
+  background: #1a1612;
+  /* Arena quemada oscura */
+  border-color: rgba(210, 180, 140, 0.2);
+}
+
+:root[data-theme="dark"] .about .about-grid .card:nth-child(1) h3 {
+  color: var(--brown-sand);
+}
+
+:root[data-theme="dark"] .about .about-grid .card:nth-child(2) {
+  background: #0d1a14;
+  /* Musgo profundo */
+  border-color: rgba(136, 176, 75, 0.2);
+}
+
+:root[data-theme="dark"] .about .about-grid .card:nth-child(2) h3 {
+  color: var(--green-light);
+}
+
+:root[data-theme="dark"] .about .about-grid .card:nth-child(3) {
+  background: #111a1a;
+  /* Eucalipto oscuro */
+  border-color: rgba(137, 194, 155, 0.2);
+}
+
+:root[data-theme="dark"] .about .about-grid .card:nth-child(3) h3 {
+  color: var(--accent);
+}
+
+:root[data-theme="dark"] .about .card p {
+  color: #c9d6cf;
+}
+
 .about .card h4 {
   text-transform: uppercase;
   letter-spacing: 2px;
