@@ -21,12 +21,17 @@
   --max-width: 1100px;
   --header-height: 72px;
 
-  /* Events Palette Updated */
-  --ev-resumen: var(--green-dark);
-  --ev-holisticos: var(--green-light);
-  --ev-retiros: var(--brown-wood);
-  --ev-culinarios: var(--brown-sand);
-  --ev-cultural: var(--black);
+  /* New Integrated Events Palette - Light Mode */
+  --ev-resumen: #1A3C34;
+  /* Bosque Profundo */
+  --ev-holisticos: #7A9D8C;
+  /* Musgo/Salitre */
+  --ev-retiros: #A67C52;
+  /* Tierra Arcillosa */
+  --ev-culinarios: #D4B483;
+  /* Trigo Maduro */
+  --ev-cultural: #4A6B63;
+  /* Eucalipto */
 }
 
 :root[data-theme="dark"] {
@@ -41,12 +46,12 @@
   --hero-overlay: 0.0;
   --hero-overlay-second: 0.0;
 
-  /* Events New Palette - Dark */
+  /* New Integrated Events Palette - Dark Mode */
   --ev-resumen: #89c29b;
-  --ev-holisticos: #9ccfb0;
-  --ev-retiros: #e2a898;
-  --ev-culinarios: #efbc81;
-  --ev-cultural: #8ca3d6;
+  --ev-holisticos: #6aa882;
+  --ev-retiros: #d2a679;
+  --ev-culinarios: #e2c08d;
+  --ev-cultural: #7a9d8c;
 }
 
 * {
@@ -595,9 +600,16 @@ h3,
   }
 }
 
-/* Events */
+/* Events Section - Full Integration */
 .events-section {
-  padding: 4rem 1.25rem;
+  padding: 6rem 1.25rem;
+  background: linear-gradient(to bottom, transparent, rgba(210, 180, 140, 0.05));
+  /* Degradado sutil a arena */
+  position: relative;
+}
+
+:root[data-theme="dark"] .events-section {
+  background: linear-gradient(to bottom, transparent, rgba(137, 194, 155, 0.02));
 }
 
 .events-intro {
@@ -642,34 +654,53 @@ h3,
 }
 
 .tab[data-type="resumen"].active {
-  background: var(--green-dark);
+  background: var(--ev-resumen);
 }
 
 .tab[data-type="holisticos"].active {
-  background: var(--green-light);
+  background: var(--ev-holisticos);
 }
 
 .tab[data-type="retiros"].active {
-  background: var(--brown-wood);
+  background: var(--ev-retiros);
 }
 
 .tab[data-type="culinarios"].active {
-  background: var(--brown-sand);
+  background: var(--ev-culinarios);
 }
 
 .tab[data-type="cultural"].active {
-  background: #3c5a5a;
+  background: var(--ev-cultural);
 }
 
 :root[data-theme="dark"] .events-tabs .tab {
-  background: #0d1d18;
+  background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.05);
-  color: var(--text);
+  color: #9fbfaa;
 }
 
 :root[data-theme="dark"] .events-tabs .tab.active {
-  background: var(--accent);
-  color: #000;
+  color: #07110d !important;
+}
+
+:root[data-theme="dark"] .tab[data-type="resumen"].active {
+  background: var(--ev-resumen);
+}
+
+:root[data-theme="dark"] .tab[data-type="holisticos"].active {
+  background: var(--ev-holisticos);
+}
+
+:root[data-theme="dark"] .tab[data-type="retiros"].active {
+  background: var(--ev-retiros);
+}
+
+:root[data-theme="dark"] .tab[data-type="culinarios"].active {
+  background: var(--ev-culinarios);
+}
+
+:root[data-theme="dark"] .tab[data-type="cultural"].active {
+  background: var(--ev-cultural);
 }
 
 
