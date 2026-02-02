@@ -1,33 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
-  --green-dark: #0f3b2b;
-  --white: #ffffff;
-  --muted: #6b6b6b;
-  --max-width: 1100px;
+  --green-dark: #1A3C34;
+  /* Verde Oscuro */
+  --green-light: #88B04B;
+  /* Verde Claro */
+  --brown-sand: #D2B48C;
+  /* Marrón Arena */
+  --brown-wood: #8B4513;
+  /* Marrón Madera */
+  --white: #FFFFFF;
+  --black: #121212;
   --bg: var(--white);
-  --text: var(--green-dark);
-  --card: #f7f7f6;
-  --accent: #9ccfb0;
-  --muted-contrast: #6b6b6b;
-  --hero-overlay: 0.30;
-  --hero-overlay-second: 0.06;
+  --text: var(--black);
+  --card: #F9F7F2;
+  /* Fondo arena muy claro para cards */
+  --accent: var(--green-light);
+  --muted: #555555;
+  --max-width: 1100px;
   --header-height: 72px;
 
-  /* Events New Palette - Light */
-  --ev-resumen: #16423C;
-  --ev-holisticos: #6A9C89;
-  --ev-retiros: #C28E7E;
-  --ev-culinarios: #D9A05B;
-  --ev-cultural: #6E85B7;
-  --ev-bg-alpha: 0.05;
-  --header-height: 72px;
-
-  /* Wellbeing Palette */
-  --wb-bg: #fdfcf0;
-  --wb-accent: #7a9d8c;
-  --wb-text: #2d3e35;
-  --wb-card: #ffffff;
+  /* Events Palette Updated */
+  --ev-resumen: var(--green-dark);
+  --ev-holisticos: var(--green-light);
+  --ev-retiros: var(--brown-wood);
+  --ev-culinarios: var(--brown-sand);
+  --ev-cultural: var(--black);
 }
 
 :root[data-theme="dark"] {
@@ -54,7 +52,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Comfortaa', cursive;
   margin: 0;
   color: var(--text);
   background: var(--bg);
@@ -67,7 +65,8 @@ h1,
 h2,
 h3,
 .brand-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
 }
 
 .container {
@@ -188,9 +187,9 @@ h3,
 }
 
 .nav a {
-  color: var(--text);
+  color: var(--black);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   position: relative;
@@ -387,11 +386,12 @@ h3,
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  /* Bordes laterales redondeados */
   text-decoration: none;
   font-weight: 600;
-  transition: 0.2s;
+  transition: 0.3s ease;
   cursor: pointer;
   border: none;
 }
@@ -399,14 +399,13 @@ h3,
 .btn.primary {
   background: var(--green-dark);
   color: var(--white);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(26, 60, 52, 0.2);
 }
 
 .btn.ghost {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: var(--white);
+  background: transparent;
+  border: 2px solid var(--green-dark);
+  color: var(--green-dark);
 }
 
 .btn:hover {
@@ -417,6 +416,43 @@ h3,
 
 .btn:active {
   transform: translateY(-2px);
+}
+
+.btn.whatsapp-hero {
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
 }
 
 /* Cards */
@@ -611,15 +647,11 @@ h3,
 /* Wellbeing Section */
 .wellbeing-section {
   padding: 6rem 1.25rem;
-  background: var(--wb-bg);
+  background: var(--card);
+  border: 2px solid var(--brown-sand);
   border-radius: 40px;
   margin: 4rem auto;
   text-align: center;
-}
-
-:root[data-theme="dark"] .wellbeing-section {
-  background: rgba(122, 157, 140, 0.05);
-  border: 1px solid rgba(122, 157, 140, 0.1);
 }
 
 .section-header {

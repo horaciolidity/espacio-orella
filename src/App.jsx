@@ -94,7 +94,14 @@ function App() {
             <p className="subtitle">Barrancas · Puerto de San Antonio — Retiros, talleres y estadías</p>
             <div className="hero-ctas">
               <a className="btn primary" href="#contacto">Consultar disponibilidad</a>
-              <a className="btn ghost" href="#galeria">Ver galería</a>
+              <a
+                className="btn whatsapp-hero"
+                href="https://wa.me/569XXXXXXXX"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Chat WhatsApp
+              </a>
             </div>
           </div>
         </section>
@@ -252,11 +259,7 @@ function App() {
           </div>
         </section>
 
-        <section id="calendario" className="container calendar-section">
-          <h2>Calendario de visitas</h2>
-          <p>Selecciona una fecha para solicitar una visita. Al hacer clic se abrirá tu cliente de correo con la solicitud prellenada.</p>
-          <Calendar />
-        </section>
+
 
         <section id="contacto" className="container contact">
           <h2>Contacto y Reservas</h2>
@@ -331,6 +334,15 @@ function App() {
         </div>
       </footer>
       <ChatBot />
+      <a
+        href="https://wa.me/569XXXXXXXX"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
+      >
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </a>
     </div>
   )
 }
