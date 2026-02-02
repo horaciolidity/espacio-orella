@@ -617,6 +617,19 @@ h3,
   border-left: 5px solid var(--accent);
 }
 
+.events-section .card {
+  border-radius: 40px;
+  background: #FDF5E6;
+  border: 1px solid var(--brown-sand);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+:root[data-theme="dark"] .events-section .card {
+  background: #1a1612;
+  border-color: rgba(210, 180, 140, 0.2);
+}
+
 
 .events-tabs {
   display: flex;
@@ -893,25 +906,63 @@ h3,
 }
 
 .well-card {
-  background: var(--white);
-  padding: 3rem 2rem;
-  border-radius: 100px;
-  /* Hace que las tarjetas se vean ovaladas */
-  aspect-ratio: 1 / 1.5;
-  /* Asegura una forma ovalada estilizada */
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  background: var(--card);
+  padding: 2.5rem 2rem;
+  border-radius: 45px;
+  /* Bordes redondeados elegantes */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* Centra el contenido internamente */
-  border: 1px solid var(--brown-sand);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-:root[data-theme="dark"] .well-card {
-  background: var(--card);
-  border-color: var(--accent);
+/* Paleta integrada para Bienestar similar a "Sobre" */
+.well-grid .well-card:nth-child(1) {
+  background: #FDF5E6;
+  border-color: var(--brown-sand);
+}
+
+.well-grid .well-card:nth-child(2) {
+  background: #F0F7E9;
+  border-color: var(--green-light);
+}
+
+.well-grid .well-card:nth-child(3) {
+  background: #E8F0F0;
+  border-color: var(--green-dark);
+}
+
+.well-grid .well-card:nth-child(4) {
+  background: #FDF4F1;
+  border-color: var(--brown-wood);
+}
+
+/* Modo Oscuro Bienestar */
+:root[data-theme="dark"] .well-grid .well-card:nth-child(1) {
+  background: #1a1612;
+}
+
+:root[data-theme="dark"] .well-grid .well-card:nth-child(2) {
+  background: #0d1a14;
+}
+
+:root[data-theme="dark"] .well-grid .well-card:nth-child(3) {
+  background: #111a1a;
+}
+
+:root[data-theme="dark"] .well-grid .well-card:nth-child(4) {
+  background: #1a1210;
+}
+
+:root[data-theme="dark"] .well-card h3 {
+  color: var(--accent);
+}
+
+:root[data-theme="dark"] .well-card p {
+  color: #c9d6cf;
 }
 
 :root[data-theme="dark"] .event-card {
@@ -924,9 +975,8 @@ h3,
 
 .well-card:hover,
 .well-card:active {
-  transform: translateY(-15px) scale(1.03);
-  box-shadow: 0 25px 60px rgba(26, 60, 52, 0.15);
-  border-color: var(--green-light);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(26, 60, 52, 0.12);
 }
 
 .well-icon {
@@ -1218,11 +1268,24 @@ section:last-of-type::after {
 }
 
 /* Contact Section */
+.contact .card {
+  border-radius: 40px;
+  background: #FDF5E6;
+  /* Fondo arena para coherencia */
+  border: 1px solid var(--brown-sand);
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+:root[data-theme="dark"] .contact .card {
+  background: #1a1612;
+  border-color: rgba(210, 180, 140, 0.2);
+}
+
 .contact-form {
   display: grid;
-  gap: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto;
+  gap: 1.5rem;
 }
 
 .field label {
@@ -1234,11 +1297,18 @@ section:last-of-type::after {
 .field input,
 .field textarea {
   width: 100%;
-  padding: 0.75rem;
-  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--bg);
   color: var(--text);
+  font-family: inherit;
+}
+
+:root[data-theme="dark"] .field input,
+:root[data-theme="dark"] .field textarea {
+  background: #0d1a14;
+  border-color: rgba(136, 176, 75, 0.2);
 }
 
 /* Social Links */
