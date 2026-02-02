@@ -726,30 +726,68 @@ h3,
 }
 
 /* Diferenciación sutil por tipo de evento - Paleta Integrada */
+/* Diferenciación por tipo de evento - Estilo "Sobre" */
 .event-card[data-type="holisticos"] {
+  background: #F0F7F4;
   border-left: 8px solid var(--ev-holisticos);
 }
 
 .event-card[data-type="retiros"] {
+  background: #FDF5E6;
   border-left: 8px solid var(--ev-retiros);
 }
 
 .event-card[data-type="culinarios"] {
+  background: #FFF9F0;
   border-left: 8px solid var(--ev-culinarios);
 }
 
 .event-card[data-type="cultural"] {
+  background: #F0F4FF;
   border-left: 8px solid var(--ev-cultural);
 }
 
+/* Modo Oscuro - Paleta de colores individual para Eventos */
+:root[data-theme="dark"] .event-card[data-type="holisticos"] {
+  background: #0d1a16;
+}
+
+:root[data-theme="dark"] .event-card[data-type="retiros"] {
+  background: #1a1612;
+}
+
+:root[data-theme="dark"] .event-card[data-type="culinarios"] {
+  background: #1a150d;
+}
+
+:root[data-theme="dark"] .event-card[data-type="cultural"] {
+  background: #10121a;
+}
+
+
 /* Integración Modo Oscuro para Eventos */
 :root[data-theme="dark"] .event-card {
-  background: #0d1d18;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+:root[data-theme="dark"] .event-card[data-type="holisticos"] h3 {
+  color: var(--ev-holisticos);
+}
+
+:root[data-theme="dark"] .event-card[data-type="retiros"] h3 {
+  color: var(--ev-retiros);
+}
+
+:root[data-theme="dark"] .event-card[data-type="culinarios"] h3 {
+  color: var(--ev-culinarios);
+}
+
+:root[data-theme="dark"] .event-card[data-type="cultural"] h3 {
+  color: var(--ev-cultural);
+}
+
 :root[data-theme="dark"] .event-card p {
-  color: #9fbfaa;
+  color: #c9d6cf;
 }
 
 .event-card:hover,
