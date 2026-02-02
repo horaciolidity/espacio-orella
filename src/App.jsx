@@ -245,8 +245,10 @@ function App() {
           </div>
           <p className="centered-text">Explora los rincones de nuestro espacio y la belleza de la costa chilena.</p>
           <div className="grid-gallery">
-            <div className="card media"><img src="/fotos/3.jpeg" alt="foto 3" /></div>
-            <div className="card media"><img src="/fotos/4.jpeg" alt="foto 4" /></div>
+            <div className="card media animate-on-scroll"><img src="/fotos/2.jpeg" alt="Espacio Exterior" /></div>
+            <div className="card media animate-on-scroll"><img src="/fotos/1.jpeg" alt="Nuestra Fachada" /></div>
+            <div className="card media animate-on-scroll"><img src="/fotos/3.jpeg" alt="Interior" /></div>
+            <div className="card media animate-on-scroll"><img src="/fotos/4.jpeg" alt="Detalles" /></div>
           </div>
         </section>
 
