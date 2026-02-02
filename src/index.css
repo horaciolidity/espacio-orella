@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --green-dark: #1A3C34;
@@ -6,9 +6,9 @@
   --green-light: #88B04B;
   /* Verde Claro */
   --brown-sand: #D2B48C;
-  /* Marrón Arena */
+  /* MarrÃ³n Arena */
   --brown-wood: #8B4513;
-  /* Marrón Madera */
+  /* MarrÃ³n Madera */
   --white: #FFFFFF;
   --bg: var(--white);
   --text: var(--green-dark);
@@ -344,7 +344,7 @@ h3,
 
 .hero .subtitle {
   font-size: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 300;
   opacity: 0.9;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -468,7 +468,7 @@ h3,
   background: var(--card);
   padding: 2rem;
   border-radius: 35px;
-  /* Más redondeados */
+  /* MÃ¡s redondeados */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -496,7 +496,7 @@ h3,
 .about .card {
   padding: 3rem 2rem;
   border-radius: 120px;
-  /* Diseño ovalado */
+  /* DiseÃ±o ovalado */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -530,7 +530,7 @@ h3,
 
 .about .about-grid .card:nth-child(3) {
   background: #E8F0F0;
-  /* Brisa marina / Verde azulado muy pálido */
+  /* Brisa marina / Verde azulado muy pÃ¡lido */
   border-color: var(--green-dark);
 }
 
@@ -538,7 +538,7 @@ h3,
   color: var(--green-dark);
 }
 
-/* Integración mejorada para Modo Oscuro */
+/* IntegraciÃ³n mejorada para Modo Oscuro */
 :root[data-theme="dark"] .about .about-grid .card:nth-child(1) {
   background: #1a1612;
   /* Arena quemada oscura */
@@ -634,7 +634,7 @@ h3,
 .events-tabs {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   overflow-x: auto;
   padding: 0.5rem 0.2rem;
   scrollbar-width: none;
@@ -730,7 +730,7 @@ h3,
   border-radius: 45px;
   /* Bordes redondeados elegantes, no ovalados extremos */
   text-align: left;
-  /* Alineación más natural */
+  /* AlineaciÃ³n mÃ¡s natural */
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   background: var(--card);
@@ -738,8 +738,8 @@ h3,
   position: relative;
 }
 
-/* Diferenciación sutil por tipo de evento - Paleta Integrada */
-/* Diferenciación por tipo de evento - Estilo "Sobre" */
+/* DiferenciaciÃ³n sutil por tipo de evento - Paleta Integrada */
+/* DiferenciaciÃ³n por tipo de evento - Estilo "Sobre" */
 .event-card[data-type="holisticos"] {
   background: #F0F7F4;
   border-left: 8px solid var(--ev-holisticos);
@@ -778,7 +778,7 @@ h3,
 }
 
 
-/* Integración Modo Oscuro para Eventos */
+/* IntegraciÃ³n Modo Oscuro para Eventos */
 :root[data-theme="dark"] .event-card {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -858,7 +858,7 @@ h3,
   height: 240px;
   object-fit: cover;
   border-radius: 30px;
-  /* Más redondeados */
+  /* MÃ¡s redondeados */
   transition: all 0.4s ease;
 }
 
@@ -1699,7 +1699,7 @@ section:last-of-type::after {
 .result-price {
   font-family: 'monospace';
   color: var(--green-light);
-  /* Verde marca en modo neón */
+  /* Verde marca en modo neÃ³n */
   text-shadow: 0 0 12px rgba(136, 176, 75, 0.6);
   font-size: 2.22rem !important;
   margin: 0.25rem 0 !important;
@@ -1754,7 +1754,7 @@ section:last-of-type::after {
   width: 100%;
   padding: 0.75rem;
   background: #0b1d19 !important;
-  /* Más oscuro para contraste */
+  /* MÃ¡s oscuro para contraste */
   border: 1px solid var(--green-dark) !important;
   color: var(--white) !important;
   border-radius: 8px !important;
@@ -1861,7 +1861,7 @@ section:last-of-type::after {
 }
 
 .quote-calculator::after {
-  content: '•';
+  content: 'â€¢';
   position: absolute;
   top: 8px;
   right: 8px;
@@ -1890,7 +1890,7 @@ section:last-of-type::after {
 
 .reviews-cta.card {
   padding: 3rem 2rem;
-  background: #F0F7E9; /* Verde p�lido */
+  background: #F0F7E9; /* Verde pálido */
   border: 1px solid var(--green-light);
   border-radius: 45px;
   text-align: center;
@@ -1918,3 +1918,5 @@ section:last-of-type::after {
  margin-bottom: 1rem;
 }
 
+
+.hero-description { max-width: 800px; margin: 0 auto 2.5rem; font-size: 1.1rem; line-height: 1.6; opacity: 0.9; text-align: center; }

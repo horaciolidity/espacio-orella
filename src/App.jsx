@@ -91,8 +91,11 @@ function App() {
       <main>
         <section className="hero">
           <div className="hero-inner container">
-            <h1>Un espacio de creación, bienestar y descanso en la costa chilena</h1>
-            <p className="subtitle">Barrancas · Puerto de San Antonio — Retiros, talleres y estadías</p>
+            <h1>🌿 Espacio Orella</h1>
+            <p className="subtitle">Descansar, trabajar y conectar con la naturaleza en San Antonio</p>
+            <p className="hero-description">
+              Un alojamiento acogedor en Barrancas, a minutos del puerto de San Antonio, donde la tranquilidad, el confort y una huerta propia se combinan para ofrecerte una experiencia auténtica. Ideal para turistas y viajeros de negocios que buscan un lugar cómodo, funcional y con alma
+            </p>
             <div className="hero-ctas">
               <a className="btn primary" href="#contacto">Consultar disponibilidad</a>
               <a
