@@ -94,8 +94,8 @@ const QuoteCalculator = () => {
                                 checked={accommodation}
                                 onChange={(e) => setAccommodation(e.target.checked)}
                             />
-                            <span className="slider"></span>
                             <span className="label-text">Incluir Alojamiento</span>
+                            <span className="slider"></span>
                         </label>
                     </div>
 

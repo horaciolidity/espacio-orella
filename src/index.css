@@ -1474,6 +1474,10 @@ section:last-of-type::after {
   /* Borde arena sutil */
 }
 
+.input-group.checkbox {
+  padding: 1.25rem 1.1rem;
+}
+
 .input-group label {
   color: var(--brown-sand) !important;
   display: block;
@@ -1537,6 +1541,23 @@ section:last-of-type::after {
   box-shadow: 0 2px 0 #07110d;
   transform: translateY(2px);
   border-color: transparent !important;
+}
+
+.toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  /* Mueve la perilla al final */
+  width: 100%;
+  cursor: pointer;
+}
+
+.label-text {
+  color: var(--brown-sand);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .slider {
