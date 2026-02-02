@@ -1,6 +1,6 @@
-# Espacio Orellana — Sitio (Vite + React)
+# Espacio Orella — Sitio (Vite + React)
 
-Este repositorio contiene una versión inicial del sitio para Espacio Orellana, ahora estructurada como una aplicación con Vite + React.
+Este repositorio contiene una versión inicial del sitio para Espacio Orella, ahora estructurada como una aplicación con Vite + React.
 
 Archivos y carpetas clave:
 

@@ -51,8 +51,8 @@ function App() {
     <div className="app">
       <header className="site-header container">
         <div className="brand">
-          <img src="/fotos/1.jpeg" alt="Espacio Orellana" className="brand-logo" />
-          <span className="brand-text">Espacio Orellana</span>
+          <img src="/fotos/1.jpeg" alt="Espacio Orella" className="brand-logo" />
+          <span className="brand-text">Espacio Orella</span>
         </div>
 
         <button
@@ -111,7 +111,7 @@ function App() {
         <section id="sobre" className="container about">
           <div className="section-header animate-on-scroll">
             <span className="pre-title">Nuestra Historia</span>
-            <h2>Sobre Espacio Orellana</h2>
+            <h2>Sobre Espacio Orella</h2>
             <p>Un refugio pensado para la calma, la conexión con la naturaleza y el florecimiento de la creatividad en el corazón de Barrancas.</p>
           </div>
           <div className="about-grid">
@@ -337,7 +337,7 @@ function App() {
       <footer className="site-footer">
         <div className="container">
           <div className="footer-inner">
-            <p>© {new Date().getFullYear()} Espacio Orellana</p>
+            <p>© {new Date().getFullYear()} Espacio Orella</p>
             <SocialLinks />
           </div>
         </div>

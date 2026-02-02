@@ -1381,3 +1381,171 @@ section:last-of-type::after {
     text-align: center;
   }
 }
+/* Quote Calculator Styles */
+.quote-calculator {
+  background: var(--card);
+  border: 1px solid var(--brown-sand);
+  border-radius: 40px;
+  padding: 3rem;
+  margin: 4rem auto;
+  max-width: 900px;
+}
+
+.quote-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.quote-header h3 {
+  font-size: 2rem;
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--green-dark);
+}
+
+.input-group select,
+.input-group input[type=" number\] {
+ width: 100%;
+ padding: 1rem;
+ border-radius: 15px;
+ border: 2px solid var(--brown-sand);
+ background: var(--white);
+ font-family: inherit;
+ font-size: 1rem;
+}
+
+.input-group.row {
+ display: flex;
+ gap: 1rem;
+}
+
+.input-group.row .col {
+ flex: 1;
+}
+
+/* Custom Checkbox Toggle */
+.input-group.checkbox .toggle {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ cursor: pointer;
+}
+
+.toggle input {
+ display: none;
+}
+
+.slider {
+ width: 50px;
+ height: 26px;
+ background-color: #ccc;
+ border-radius: 34px;
+ position: relative;
+ transition: 0.4s;
+}
+
+.slider:before {
+ content: \\;
+ position: absolute;
+ height: 18px;
+ width: 18px;
+ left: 4px;
+ bottom: 4px;
+ background-color: white;
+ border-radius: 50%;
+ transition: 0.4s;
+}
+
+.toggle input:checked + .slider {
+ background-color: var(--green-light);
+}
+
+.toggle input:checked + .slider:before {
+ transform: translateX(24px);
+}
+
+.radio-group {
+ display: flex;
+ gap: 0.5rem;
+ flex-wrap: wrap;
+}
+
+.radio-opt {
+ padding: 0.75rem 1rem;
+ background: var(--white);
+ border: 2px solid var(--brown-sand);
+ border-radius: 50px;
+ cursor: pointer;
+ font-size: 0.85rem;
+ font-weight: 600;
+ transition: 0.3s;
+}
+
+.radio-opt input {
+ display: none;
+}
+
+.radio-opt.active {
+ background: var(--green-dark);
+ color: var(--white);
+ border-color: var(--green-dark);
+}
+
+.result-card {
+ background: var(--white);
+ padding: 2.5rem;
+ border-radius: 35px;
+ box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+ text-align: center;
+ border: 1px solid var(--brown-sand);
+}
+
+.result-label {
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ font-size: 0.8rem;
+ font-weight: 700;
+ color: var(--muted);
+}
+
+.result-price {
+ font-size: 2.5rem;
+ color: var(--green-dark);
+ margin: 1rem 0;
+}
+
+.result-hint {
+ font-size: 0.8rem;
+ color: var(--muted);
+ font-style: italic;
+ margin-bottom: 2rem;
+}
+
+.w-full {
+ width: 100%;
+}
+

@@ -4,7 +4,7 @@ import { FaWhatsapp, FaRobot, FaTimes, FaPaperPlane } from 'react-icons/fa';
 const CHAT_FLOW = [
     {
         id: 'start',
-        message: '¡Hola! Bienvenid@ a Espacio Orellana. 🌿 Soy tu asistente virtual. ¿Cómo te llamas?',
+        message: '¡Hola! Bienvenid@ a Espacio Orella. 🌿 Soy tu asistente virtual. ¿Cómo te llamas?',
         key: 'name',
         next: 'service'
     },
@@ -115,7 +115,7 @@ function ChatBot() {
                         <div className="bot-info">
                             <FaRobot />
                             <div>
-                                <h4>Asistente Orellana</h4>
+                                <h4>Asistente Orella</h4>
                                 <span className="online-tag">En línea</span>
                             </div>
                         </div>
