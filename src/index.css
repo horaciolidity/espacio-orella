@@ -10,9 +10,10 @@
   --brown-wood: #8B4513;
   /* Marrón Madera */
   --white: #FFFFFF;
-  --black: #121212;
   --bg: var(--white);
-  --text: var(--black);
+  --text: var(--green-dark);
+  /* Texto base en verde oscuro para mejor contraste */
+  --nav-text: var(--green-dark);
   --card: #F9F7F2;
   /* Fondo arena muy claro para cards */
   --accent: var(--green-light);
@@ -35,6 +36,7 @@
   --bg: #07110d;
   --bg-solid: #07110d;
   --text: #e6f6ec;
+  --nav-text: #e6f6ec;
   --card: #0b2219;
   --hero-overlay: 0.0;
   --hero-overlay-second: 0.0;
@@ -187,7 +189,8 @@ h3,
 }
 
 .nav a {
-  color: var(--black);
+  color: var(--nav-text);
+  /* Usa la variable nav-text definida en modo claro y oscuro */
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -567,9 +570,13 @@ h3,
   border-top: 6px solid var(--accent);
   display: flex;
   flex-direction: column;
-  border-radius: 35px;
-  /* Más redondeados */
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  border-radius: 150px;
+  /* Forma ovalada */
+  aspect-ratio: 1 / 1.5;
   overflow: hidden;
+  text-align: center;
 }
 
 .event-card[data-type="holisticos"] {
@@ -697,19 +704,31 @@ h3,
 .well-card {
   background: var(--white);
   padding: 3rem 2rem;
-  border-radius: 40px;
-  /* Más redondeados */
+  border-radius: 100px;
+  /* Hace que las tarjetas se vean ovaladas */
+  aspect-ratio: 1 / 1.5;
+  /* Asegura una forma ovalada estilizada */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  /* Centra el contenido internamente */
   border: 1px solid var(--brown-sand);
 }
 
 :root[data-theme="dark"] .well-card {
   background: var(--card);
-  border-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+}
+
+:root[data-theme="dark"] .event-card {
+  background: var(--card);
+}
+
+:root[data-theme="dark"] .nav.open {
+  background: var(--bg);
 }
 
 .well-card:hover,
@@ -746,7 +765,11 @@ h3,
 }
 
 :root[data-theme="dark"] .well-card h3 {
-  color: var(--text);
+  color: var(--accent);
+}
+
+:root[data-theme="dark"] .event-card h3 {
+  color: var(--accent);
 }
 
 .well-card p {
@@ -1203,6 +1226,7 @@ section:last-of-type::after {
 .bot-info h4 {
   margin: 0;
   font-size: 1rem;
+  color: white;
 }
 
 .online-tag {
@@ -1340,6 +1364,7 @@ section:last-of-type::after {
   padding: 3rem 1.25rem;
   background: var(--card);
   margin-top: 4rem;
+  color: var(--text);
 }
 
 .footer-inner {
