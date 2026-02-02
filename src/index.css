@@ -1870,3 +1870,51 @@ section:last-of-type::after {
   text-shadow: 12px 0 var(--brown-wood), 0 12px var(--brown-wood), 12px 12px var(--brown-wood);
   opacity: 0.6;
 }
+/* Reviews & Location Section */
+.reviews-section {
+  padding: 6rem 1.25rem;
+}
+
+.reviews-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .reviews-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reviews-cta.card {
+  padding: 3rem 2rem;
+  background: #F0F7E9; /* Verde pálido */
+  border: 1px solid var(--green-light);
+  border-radius: 45px;
+  text-align: center;
+}
+
+:root[data-theme=" dark\] .reviews-cta.card {
+ background: #0d1a14;
+ border-color: rgba(136, 176, 75, 0.2);
+}
+
+.map-container.card {
+ border-radius: 45px;
+ overflow: hidden;
+ padding: 0 !important;
+ border: 2px solid var(--brown-sand);
+ background: var(--card);
+}
+
+:root[data-theme=\dark\] .map-container.card {
+ border-color: rgba(210, 180, 140, 0.2);
+}
+
+.google-icon {
+ font-size: 2.5rem;
+ margin-bottom: 1rem;
+}
+
