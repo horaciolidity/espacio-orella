@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Calendar from './components/Calendar'
 import SocialLinks from './components/SocialLinks'
 import ChatBot from './components/ChatBot'
+import QuoteCalculator from './components/QuoteCalculator'
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -260,6 +261,14 @@ function App() {
         </section>
 
 
+
+        <section id="cotizador" className="container quote-section">
+          <div className="section-header animate-on-scroll">
+            <span className="pre-title">Presupuesto Online</span>
+            <h2>Cotiza tu Experiencia</h2>
+          </div>
+          <QuoteCalculator />
+        </section>
 
         <section id="contacto" className="container contact">
           <h2>Contacto y Reservas</h2>
