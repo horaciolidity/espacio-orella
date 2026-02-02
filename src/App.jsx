@@ -55,11 +55,13 @@ function App() {
         </div>
 
         <button
-          className="menu-toggle"
+          className={`menu-toggle ${isMenuOpen ? 'open' : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menú"
         >
-          {isMenuOpen ? '✕' : '☰'}
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
@@ -99,8 +101,11 @@ function App() {
 
 
         <section id="sobre" className="container about">
-          <h2>Sobre Espacio Orellana</h2>
-          <p>Espacio pensado para la calma, la conexión con la naturaleza y la creatividad. Alojamiento y espacios para talleres y retiros.</p>
+          <div className="section-header animate-on-scroll">
+            <span className="pre-title">Nuestra Historia</span>
+            <h2>Sobre Espacio Orellana</h2>
+            <p>Un refugio pensado para la calma, la conexión con la naturaleza y el florecimiento de la creatividad en el corazón de Barrancas.</p>
+          </div>
           <div className="about-grid">
             <div className="card animate-on-scroll">
               <h3>Alojamiento</h3>
@@ -204,7 +209,8 @@ function App() {
         </section>
 
         <section id="bienestar" className="wellbeing-section container">
-          <div className="section-header">
+          <div className="section-header animate-on-scroll">
+            <span className="pre-title">Cuidado Holístico</span>
             <h2>Bienestar y Experiencias</h2>
             <p className="section-intro">Descubre un refugio para el alma. Ofrecemos terapias y prácticas diseñadas para restaurar el equilibrio, la paz interior y la vitalidad en un entorno natural único.</p>
           </div>
@@ -233,8 +239,11 @@ function App() {
         </section>
 
         <section id="galeria" className="container gallery">
-          <h2>Galería</h2>
-          <p>Coloca tus fotos en <strong>/public/assets/photos</strong> y aparecerán aquí (referencias estáticas).</p>
+          <div className="section-header animate-on-scroll">
+            <span className="pre-title">Visualiza el Entorno</span>
+            <h2>Galería de Momentos</h2>
+          </div>
+          <p className="centered-text">Explora los rincones de nuestro espacio y la belleza de la costa chilena.</p>
           <div className="grid-gallery">
             <div className="card media"><img src="/fotos/3.jpeg" alt="foto 3" /></div>
             <div className="card media"><img src="/fotos/4.jpeg" alt="foto 4" /></div>
