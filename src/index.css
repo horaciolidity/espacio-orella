@@ -1375,22 +1375,23 @@ section:last-of-type::after {
   gap: 2rem;
 }
 
-/* Hardware Console Quote Calculator */
+/* Hardware Console Quote Calculator - Themed */
 .quote-calculator {
-  background: #1a1a1a;
+  background: #0f241f;
+  /* Verde bosque muy profundo */
   background-image:
-    linear-gradient(90deg, #222 1px, transparent 1px),
-    linear-gradient(#222 1px, transparent 1px);
+    linear-gradient(90deg, rgba(136, 176, 75, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(136, 176, 75, 0.03) 1px, transparent 1px);
   background-size: 15px 15px;
-  border: 4px solid #333;
-  border-radius: 20px;
+  border: 4px solid var(--brown-wood);
+  /* Marco de madera oscura */
+  border-radius: 24px;
   padding: 1.5rem;
   margin: 3rem auto;
   max-width: 850px;
-  /* Mas ancho para permitir el diseño horizontal */
   box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.5),
-    inset 0 0 70px rgba(0, 0, 0, 0.2);
+    0 15px 45px rgba(26, 60, 52, 0.3),
+    inset 0 0 70px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -1401,9 +1402,9 @@ section:last-of-type::after {
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--green-light), #25D366, var(--green-light));
-  box-shadow: 0 0 15px var(--green-light);
+  height: 4px;
+  background: linear-gradient(90deg, var(--brown-sand), var(--green-light), var(--brown-sand));
+  box-shadow: 0 0 10px var(--green-light);
 }
 
 .quote-header h3 {
@@ -1416,27 +1417,30 @@ section:last-of-type::after {
   text-align: center;
 }
 
-/* Digital Display Panel */
+/* Digital Display Panel - Organic Neon */
 .quote-result {
-  background: #000;
-  border: 2px solid #333;
-  border-radius: 10px;
+  background: #07110d;
+  /* Fondo casi negro pero verdoso */
+  border: 2px solid var(--brown-solid, #3d2b1f);
+  border-radius: 12px;
   padding: 2rem 1.25rem;
   position: relative;
-  box-shadow: inset 0 0 20px rgba(136, 176, 75, 0.1);
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(136, 176, 75, 0.1);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  /* Ocupa todo el alto de la columna */
 }
 
 .result-price {
   font-family: 'monospace';
-  color: #39FF14;
-  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
-  font-size: 2.2rem !important;
+  color: var(--green-light);
+  /* Verde marca en modo neón */
+  text-shadow: 0 0 12px rgba(136, 176, 75, 0.6);
+  font-size: 2.22rem !important;
   margin: 0.25rem 0 !important;
 }
 
@@ -1462,31 +1466,36 @@ section:last-of-type::after {
 }
 
 .input-group {
-  background: #222;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #333;
+  background: rgba(255, 255, 255, 0.03);
+  /* Transparencia sutil sobre el fondo oscuro */
+  padding: 1.1rem;
+  border-radius: 15px;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+  /* Borde arena sutil */
 }
 
 .input-group label {
-  color: #888 !important;
+  color: var(--brown-sand) !important;
   display: block;
   text-transform: uppercase;
   font-size: 0.65rem !important;
   letter-spacing: 2px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
 }
 
 .input-group select,
 .input-group input[type="number"] {
   width: 100%;
   padding: 0.75rem;
-  background: #111 !important;
-  border: 1px solid #444 !important;
-  color: var(--green-light) !important;
-  border-radius: 5px !important;
-  font-weight: bold;
+  background: #0b1d19 !important;
+  /* Más oscuro para contraste */
+  border: 1px solid var(--green-dark) !important;
+  color: var(--white) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
   font-size: 0.9rem;
+  outline: none;
 }
 
 .input-group.row {
@@ -1506,15 +1515,16 @@ section:last-of-type::after {
 }
 
 .radio-opt {
-  padding: 0.5rem 0.75rem;
-  background: #333 !important;
-  border: none !important;
+  padding: 0.55rem 0.85rem;
+  background: #1a3c34 !important;
+  /* Verde oscuro marca */
+  border: 1px solid rgba(210, 180, 140, 0.3) !important;
   border-radius: 50px;
-  color: #777 !important;
+  color: var(--brown-sand) !important;
   font-size: 0.7rem !important;
   cursor: pointer;
   transition: 0.2s;
-  box-shadow: 0 3px 0 #111;
+  box-shadow: 0 4px 0 #07110d;
 }
 
 .radio-opt input {
@@ -1523,16 +1533,17 @@ section:last-of-type::after {
 
 .radio-opt.active {
   background: var(--green-light) !important;
-  color: #111 !important;
-  box-shadow: 0 1px 0 #000;
+  color: var(--green-dark) !important;
+  box-shadow: 0 2px 0 #07110d;
   transform: translateY(2px);
+  border-color: transparent !important;
 }
 
 .slider {
-  width: 40px;
-  height: 20px;
-  background-color: #111 !important;
-  border: 1px solid #444;
+  width: 44px;
+  height: 22px;
+  background-color: #0b1d19 !important;
+  border: 1px solid var(--brown-sand);
   border-radius: 20px;
   position: relative;
   transition: 0.4s;
@@ -1541,28 +1552,30 @@ section:last-of-type::after {
 .slider:before {
   content: "";
   position: absolute;
-  height: 14px;
-  width: 14px;
+  height: 16px;
+  width: 16px;
   left: 2px;
   bottom: 2px;
-  background-color: #555 !important;
+  background-color: var(--brown-sand) !important;
   border-radius: 50%;
   transition: 0.4s;
 }
 
 .toggle input:checked+.slider {
-  background-color: #333 !important;
+  background-color: var(--green-light) !important;
 }
 
 .toggle input:checked+.slider:before {
-  transform: translateX(20px);
+  transform: translateX(22px);
+  background-color: var(--green-dark) !important;
 }
 
 .result-hint {
-  color: #555;
+  color: #4a6b63;
   font-size: 0.65rem;
-  margin: 0.75rem 0;
+  margin: 1rem 0;
   font-style: italic;
+  line-height: 1.4;
 }
 
 .quote-calculator::after {
@@ -1570,7 +1583,8 @@ section:last-of-type::after {
   position: absolute;
   top: 8px;
   right: 8px;
-  color: #333;
+  color: var(--brown-wood);
   font-size: 14px;
-  text-shadow: 10px 0 #333, 0 10px #333, 10px 10px #333;
+  text-shadow: 12px 0 var(--brown-wood), 0 12px var(--brown-wood), 12px 12px var(--brown-wood);
+  opacity: 0.6;
 }
