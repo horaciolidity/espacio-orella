@@ -458,15 +458,17 @@ h3,
 /* Cards */
 .card {
   background: var(--card);
-  padding: 1.5rem;
-  border-radius: 16px;
+  padding: 2rem;
+  border-radius: 35px;
+  /* Más redondeados */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+.card:hover,
+.card:active {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* About Grid */
@@ -565,6 +567,9 @@ h3,
   border-top: 6px solid var(--accent);
   display: flex;
   flex-direction: column;
+  border-radius: 35px;
+  /* Más redondeados */
+  overflow: hidden;
 }
 
 .event-card[data-type="holisticos"] {
@@ -581,6 +586,18 @@ h3,
 
 .event-card[data-type="cultural"] {
   border-top-color: var(--ev-cultural);
+}
+
+.event-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background: var(--white);
+}
+
+.event-card:hover,
+.event-card:active {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(26, 60, 52, 0.1);
 }
 
 .event-card h3 {
@@ -629,8 +646,14 @@ h3,
   width: 100%;
   height: 240px;
   object-fit: cover;
-  border-radius: 16px;
-  transition: 0.3s;
+  border-radius: 30px;
+  /* Más redondeados */
+  transition: all 0.4s ease;
+}
+
+.grid-gallery img:hover {
+  transform: scale(1.05);
+  border-radius: 20px;
 }
 
 @media (max-width: 600px) {
@@ -672,15 +695,16 @@ h3,
 }
 
 .well-card {
-  background: var(--wb-card);
+  background: var(--white);
   padding: 3rem 2rem;
-  border-radius: 24px;
+  border-radius: 40px;
+  /* Más redondeados */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--brown-sand);
 }
 
 :root[data-theme="dark"] .well-card {
@@ -688,10 +712,11 @@ h3,
   border-color: rgba(255, 255, 255, 0.05);
 }
 
-.well-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 60px rgba(122, 157, 140, 0.15);
-  border-color: var(--wb-accent);
+.well-card:hover,
+.well-card:active {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(26, 60, 52, 0.15);
+  border-color: var(--green-light);
 }
 
 .well-icon {
@@ -714,10 +739,10 @@ h3,
 }
 
 .well-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Comfortaa', cursive;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--wb-text);
+  color: var(--green-dark);
 }
 
 :root[data-theme="dark"] .well-card h3 {
