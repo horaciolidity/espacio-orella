@@ -304,7 +304,7 @@ h3,
   min-height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
   color: var(--white);
   padding: 8rem 0;
@@ -327,6 +327,8 @@ h3,
   position: relative;
   z-index: 2;
   width: 100%;
+  max-width: 750px;
+  margin-right: 8%;
 }
 
 .hero h1 {
@@ -378,6 +380,12 @@ h3,
   .hero {
     min-height: 50vh;
     padding: 3rem 1.25rem;
+    justify-content: center;
+  }
+
+  .hero-inner {
+    margin-right: 0;
+    max-width: 100%;
   }
 
   .hero h1 {
