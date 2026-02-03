@@ -1,70 +1,89 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --green-dark: #1A3C34;
-  /* Verde Oscuro */
-  --green-light: #88B04B;
-  /* Verde Claro */
-  --brown-sand: #D2B48C;
-  /* MarrÃ³n Arena */
-  --brown-wood: #8B4513;
-  /* MarrÃ³n Madera */
+  /* Premium Earthy Palette */
+  --green-dark: #2C4A3B;
+  /* Deep Forest Green - More sophisticated */
+  --green-light: #8BA890;
+  /* Sage Green - Softer, less neon */
+  --brown-sand: #E3D4C4;
+  /* Soft Sand */
+  --brown-wood: #8F6B56;
+  /* Muted Wood */
   --white: #FFFFFF;
-  --bg: var(--white);
-  --text: var(--green-dark);
-  /* Texto base en verde oscuro para mejor contraste */
-  --nav-text: var(--green-dark);
-  --card: #F9F7F2;
-  /* Fondo arena muy claro para cards */
-  --accent: var(--green-light);
-  --muted: #555555;
-  --max-width: 1100px;
-  --header-height: 72px;
+  --bg: #FAFAF8;
+  /* Warm off-white, paper texture feel */
+  --bg-secondary: #F4F2ED;
+  --text: #3A403D;
+  /* Charcoal Green for softer contrast than black */
+  --nav-text: var(--text);
+  --card: #FFFFFF;
 
-  /* New Integrated Events Palette - Light Mode */
-  --ev-resumen: #1A3C34;
-  /* Bosque Profundo */
-  --ev-holisticos: #7A9D8C;
-  /* Musgo/Salitre */
-  --ev-retiros: #A67C52;
-  /* Tierra Arcillosa */
-  --ev-culinarios: #D4B483;
-  /* Trigo Maduro */
-  --ev-cultural: #4A6B63;
-  /* Eucalipto */
+  --accent: #D4A373;
+  /* Soft Amber/Gold accent for contrast */
+  --muted: #7D8580;
+
+  --max-width: 1200px;
+  /* Slightly wider for modern feel */
+  --header-height: 80px;
+
+  /* Event Palette - Muted/Natural */
+  --ev-resumen: #2C4A3B;
+  --ev-holisticos: #8BA890;
+  --ev-retiros: #B89C86;
+  /* Clay */
+  --ev-culinarios: #E0C097;
+  /* Wheat */
+  --ev-cultural: #6B8076;
+  /* Slate Green */
 }
 
 :root[data-theme="dark"] {
-  --green-dark: #89c29b;
-  --accent: #6aa882;
-  --muted: #9fbfaa;
-  --bg: #07110d;
-  --bg-solid: #07110d;
-  --text: #e6f6ec;
-  --nav-text: #e6f6ec;
-  --card: #0b2219;
-  --hero-overlay: 0.0;
-  --hero-overlay-second: 0.0;
+  --green-dark: #A4C3B2;
+  --green-light: #5A7D6C;
+  --brown-sand: #4A4036;
+  --brown-wood: #D4A373;
 
-  /* New Integrated Events Palette - Dark Mode */
-  --ev-resumen: #89c29b;
-  --ev-holisticos: #6aa882;
-  --ev-retiros: #d2a679;
-  --ev-culinarios: #e2c08d;
-  --ev-cultural: #7a9d8c;
+  --bg: #121413;
+  /* Rich Black-Green */
+  --bg-secondary: #1A1D1C;
+  --bg-solid: #121413;
+
+  --text: #EDEDE9;
+  --nav-text: #EDEDE9;
+  --card: #1F2421;
+  /* Dark Charcoal */
+
+  --accent: #D4A373;
+  --muted: #8F9995;
+
+  --hero-overlay: 0.2;
+
+  /* Events Dark */
+  --ev-resumen: #A4C3B2;
+  --ev-holisticos: #5A7D6C;
+  --ev-retiros: #8F6B56;
+  --ev-culinarios: #9C8565;
+  --ev-cultural: #6B8076;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Raleway', sans-serif;
+  /* Modern, readable, geometric but friendly */
   margin: 0;
   color: var(--text);
   background: var(--bg);
   line-height: 1.7;
-  transition: background .25s, color .25s;
+  transition: background .4s ease, color .4s ease;
+  /* Smoother theme transition */
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -73,8 +92,9 @@ h1,
 h2,
 h3,
 .brand-text {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .container {
@@ -342,15 +362,27 @@ h3,
 
 .hero .subtitle {
   font-size: 1.35rem;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
+  margin-bottom: 2rem;
+  font-weight: 500;
   opacity: 0.95;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   max-width: 700px;
-  /* Slightly wider for better flow */
   margin-left: auto;
   margin-right: auto;
   color: #f0f0f0;
+  animation: floatSub 6s ease-in-out infinite;
+}
+
+@keyframes floatSub {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .hero-inner {
@@ -399,21 +431,44 @@ h3,
 
 /* Buttons */
 .btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.2rem;
   border-radius: 50px;
-  /* Bordes laterales redondeados */
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   cursor: pointer;
   border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .btn.primary {
   background: var(--green-dark);
-  color: var(--white);
-  box-shadow: 0 4px 15px rgba(26, 60, 52, 0.2);
+  color: white;
+  box-shadow: 0 4px 20px rgba(44, 74, 59, 0.25);
+}
+
+.btn.primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.btn.primary:hover::before {
+  transform: translateX(100%);
 }
 
 .btn.ghost {
@@ -423,13 +478,13 @@ h3,
 }
 
 .btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(15, 59, 43, 0.2);
-  filter: brightness(1.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(44, 74, 59, 0.3);
 }
 
 .btn:active {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(44, 74, 59, 0.2);
 }
 
 .btn.whatsapp-hero {
@@ -472,11 +527,16 @@ h3,
 /* Cards */
 .card {
   background: var(--card);
-  padding: 2rem;
-  border-radius: 35px;
-  /* MÃ¡s redondeados */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+:root[data-theme="dark"] .card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover,
@@ -1389,18 +1449,37 @@ section:last-of-type::after {
   animation: fadeInOut 4s infinite;
 }
 
+/* Improved Chat Tooltip Animation */
 @keyframes fadeInOut {
 
   0%,
   100% {
-    opacity: 0;
-    transform: translateX(10px);
+    transform: translateY(0);
+    opacity: 1;
   }
 
-  20%,
-  80% {
-    opacity: 1;
-    transform: translateX(0);
+  50% {
+    transform: translateY(-5px);
+    opacity: 0.9;
+  }
+}
+
+.chat-trigger {
+  /* ... existing styles ... */
+  animation: pulseTrigger 3s infinite;
+}
+
+@keyframes pulseTrigger {
+  0% {
+    box-shadow: 0 0 0 0 rgba(44, 74, 59, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(44, 74, 59, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(44, 74, 59, 0);
   }
 }
 
