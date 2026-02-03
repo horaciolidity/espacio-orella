@@ -66,10 +66,15 @@ function App() {
         </button>
 
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#sobre" onClick={() => setIsMenuOpen(false)}>Sobre</a>
+          <a href="#" onClick={() => setIsMenuOpen(false)}>Inicio</a>
+          <a href="#quienes-somos" onClick={() => setIsMenuOpen(false)}>Quiénes Somos</a>
+          <a href="#alojamiento" onClick={() => setIsMenuOpen(false)}>Alojamiento</a>
           <a href="#eventos" onClick={() => setIsMenuOpen(false)}>Eventos</a>
-          <a href="#bienestar" onClick={() => setIsMenuOpen(false)}>Bienestar</a>
+          <a href="#servicios" onClick={() => setIsMenuOpen(false)}>Servicios</a>
+          <a href="#viajes-corporativos" onClick={() => setIsMenuOpen(false)}>Viajes Corporativos</a>
+          <a href="#ubicacion" onClick={() => setIsMenuOpen(false)}>Ubicación</a>
           <a href="#galeria" onClick={() => setIsMenuOpen(false)}>Galería</a>
+          <a href="#contacto" onClick={() => setIsMenuOpen(false)}>Contacto</a>
 
 
           <div className="mobile-only header-social">
@@ -101,7 +106,7 @@ function App() {
         </section>
 
 
-        <section id="sobre" className="container about">
+        <section id="quienes-somos" className="container about">
           <div className="section-header animate-on-scroll">
             <span className="pre-title">Nuestra Historia</span>
             <h2>Sobre Espacio Orella</h2>
@@ -209,10 +214,10 @@ function App() {
           </div>
         </section>
 
-        <section id="bienestar" className="wellbeing-section container">
+        <section id="servicios" className="wellbeing-section container">
           <div className="section-header animate-on-scroll">
             <span className="pre-title">Cuidado Holístico</span>
-            <h2>Bienestar y Experiencias</h2>
+            <h2>Servicios de Bienestar</h2>
             <p className="section-intro">Descubre un refugio para el alma. Ofrecemos terapias y prácticas diseñadas para restaurar el equilibrio, la paz interior y la vitalidad en un entorno natural único.</p>
           </div>
           <div className="well-grid">
@@ -290,9 +295,9 @@ function App() {
             <p><strong>Email:</strong> contacto@espacioorella.cl</p>
           </div>
         </section>
-        <section id="opiniones" className="container reviews-section">
+        <section id="ubicacion" className="container reviews-section">
           <div className="section-header animate-on-scroll">
-            <h2>Experiencias y Ubicación</h2>
+            <h2>Ubicación y Experiencias</h2>
             <p className="section-intro">Tu opinión es fundamental para nosotros. Te invitamos a compartir tu experiencia en Espacio Orella y a visitarnos en nuestro rincón de paz en San Antonio.</p>
           </div>
 
