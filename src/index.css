@@ -66,6 +66,7 @@ body {
   line-height: 1.7;
   transition: background .25s, color .25s;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1,
@@ -306,7 +307,7 @@ h3,
   justify-content: center;
   text-align: center;
   color: var(--white);
-  padding: 8rem 1.25rem;
+  padding: 8rem 0;
   overflow: hidden;
   background-image: url('/fotos/5.jpeg');
   background-size: cover;
@@ -553,7 +554,7 @@ h3,
 
 /* Events Section - Full Integration */
 .events-section {
-  padding: 6rem 1.25rem;
+  padding: 6rem 0;
   background: linear-gradient(to bottom, transparent, rgba(210, 180, 140, 0.05));
   /* Degradado sutil a arena */
   position: relative;
@@ -831,7 +832,7 @@ h3,
 
 /* Wellbeing Section */
 .wellbeing-section {
-  padding: 6rem 1.25rem;
+  padding: 6rem 0;
   background: var(--card);
   border: 2px solid var(--brown-sand);
   border-radius: 40px;
@@ -1040,7 +1041,7 @@ section:last-of-type::after {
 
 /* Calendar Section */
 .calendar-section {
-  padding: 6rem 1.25rem;
+  padding: 6rem 0;
 }
 
 .calendar-card {
@@ -1290,7 +1291,7 @@ section:last-of-type::after {
 
 /* Experience & Maps Section */
 .reviews-section {
-  padding: 6rem 1.25rem;
+  padding: 6rem 0;
 }
 
 .reviews-layout {
