@@ -47,84 +47,80 @@ const QuoteCalculator = () => {
     };
 
     return (
-        <div className="quote-calculator animate-on-scroll">
-            <div className="quote-header">
-                <h3>Cotizador de Experiencias</h3>
-                <p>Personaliza tu retiro o evento y obtén un presupuesto estimado al instante.</p>
-            </div>
+        <div className="booking-quote-container animate-on-scroll">
+            <div className="booking-wrapper">
+                <div className="booking-title">
+                    <h3>📅 Reserva tu Experiencia</h3>
+                    <p>Cotiza tu estadía o evento al instante</p>
+                </div>
 
-            <div className="quote-grid">
-                <div className="quote-inputs">
-                    <div className="input-group">
-                        <label>Tipo de Servicio</label>
-                        <select value={service} onChange={(e) => setService(e.target.value)}>
-                            <option value="retiro">Retiro Holístico</option>
-                            <option value="taller">Taller Creativo/Culinario</option>
-                            <option value="evento">Evento Corporativo/Social</option>
-                        </select>
+                <div className="booking-bar">
+                    <div className="booking-field">
+                        <label>📂 Tipo de Servicio</label>
+                        <div className="input-wrapper">
+                            <select value={service} onChange={(e) => setService(e.target.value)}>
+                                <option value="retiro">Retiro Holístico</option>
+                                <option value="taller">Taller Creativo</option>
+                                <option value="evento">Evento Social</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <div className="input-group row">
-                        <div className="col">
-                            <label>Duración (Días)</label>
+                    <div className="booking-field">
+                        <label>🗓️ Duración / 👥 Pax</label>
+                        <div className="input-row">
                             <input
                                 type="number"
                                 min="1"
                                 max="14"
                                 value={duration}
                                 onChange={(e) => setDuration(parseInt(e.target.value) || 1)}
+                                placeholder="Días"
+                                title="Días"
                             />
-                        </div>
-                        <div className="col">
-                            <label>N° Personas</label>
+                            <span className="separator">|</span>
                             <input
                                 type="number"
                                 min="5"
                                 max="30"
                                 value={people}
                                 onChange={(e) => setPeople(parseInt(e.target.value) || 5)}
+                                placeholder="Personas"
+                                title="Personas"
                             />
                         </div>
                     </div>
 
-                    <div className="input-group checkbox">
-                        <label className="toggle">
-                            <input
-                                type="checkbox"
-                                checked={accommodation}
-                                onChange={(e) => setAccommodation(e.target.checked)}
-                            />
-                            <span className="label-text">Incluir Alojamiento</span>
-                            <span className="slider"></span>
-                        </label>
-                    </div>
-
-                    <div className="input-group">
-                        <label>Servicio de Alimentación</label>
-                        <div className="radio-group">
-                            <label className={`radio-opt ${catering === 'none' ? 'active' : ''}`}>
-                                <input type="radio" value="none" checked={catering === 'none'} onChange={(e) => setCatering(e.target.value)} />
-                                Sin comidas
+                    <div className="booking-field">
+                        <label>⚙️ Opciones</label>
+                        <div className="options-row">
+                            <label className="checkbox-mini">
+                                <input
+                                    type="checkbox"
+                                    checked={accommodation}
+                                    onChange={(e) => setAccommodation(e.target.checked)}
+                                />
+                                <span>Alojamiento</span>
                             </label>
-                            <label className={`radio-opt ${catering === 'breakfast' ? 'active' : ''}`}>
-                                <input type="radio" value="breakfast" checked={catering === 'breakfast'} onChange={(e) => setCatering(e.target.value)} />
-                                Solo desayuno
-                            </label>
-                            <label className={`radio-opt ${catering === 'full' ? 'active' : ''}`}>
-                                <input type="radio" value="full" checked={catering === 'full'} onChange={(e) => setCatering(e.target.value)} />
-                                Pensión completa
-                            </label>
+                            <select
+                                className="mini-select"
+                                value={catering}
+                                onChange={(e) => setCatering(e.target.value)}
+                            >
+                                <option value="none">Sin comidas</option>
+                                <option value="breakfast">Desayuno</option>
+                                <option value="full">Pensión completa</option>
+                            </select>
                         </div>
                     </div>
-                </div>
 
-                <div className="quote-result">
-                    <div className="result-card">
-                        <span className="result-label">Total Estimado</span>
-                        <h2 className="result-price">{formatPrice(total)}</h2>
-                        <p className="result-hint">* Este precio es una referencia aproximada y puede variar según requerimientos específicos.</p>
-                        <button className="btn primary w-full" onClick={handleConsult}>
-                            Consultar por WhatsApp
+                    <div className="booking-action">
+                        <div className="price-display">
+                            <small>Total Estimado</small>
+                            <span className="price">{formatPrice(total)}</span>
+                        </div>
+                        <button className="btn-search" onClick={handleConsult}>
+                            Solicitar
                         </button>
                     </div>
                 </div>

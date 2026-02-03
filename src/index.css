@@ -1588,239 +1588,227 @@ section:last-of-type::after {
   gap: 2rem;
 }
 
-/* Hardware Console Quote Calculator - Themed */
-.quote-calculator {
-  background: #0f241f;
-  /* Verde bosque muy profundo */
-  background-image:
-    linear-gradient(90deg, rgba(136, 176, 75, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(136, 176, 75, 0.03) 1px, transparent 1px);
-  background-size: 15px 15px;
-  border: 4px solid var(--brown-wood);
-  /* Marco de madera oscura */
-  border-radius: 24px;
-  padding: 1.5rem;
-  margin: 3rem auto;
-  max-width: 850px;
-  box-shadow:
-    0 15px 45px rgba(26, 60, 52, 0.3),
-    inset 0 0 70px rgba(0, 0, 0, 0.4);
-  position: relative;
-  overflow: hidden;
+/* Booking Style Quote Calculator */
+.booking-quote-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.quote-calculator::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--brown-sand), var(--green-light), var(--brown-sand));
-  box-shadow: 0 0 10px var(--green-light);
+.booking-wrapper {
+  background: #febb02;
+  /* Booking Yellow-ish, adapted to brand or Keep Brand? Let's use Brand Gold/Yellow */
+  background: var(--ev-culinarios);
+  /* Goldish wheat color */
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.quote-header h3 {
-  font-family: 'Comfortaa', cursive;
-  color: #eee;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+.booking-title {
+  padding: 1rem;
+  color: var(--green-dark);
   text-align: center;
 }
 
-/* Digital Display Panel - Organic Neon */
-.quote-result {
-  background: #07110d;
-  /* Fondo casi negro pero verdoso */
-  border: 2px solid var(--brown-solid, #3d2b1f);
-  border-radius: 12px;
-  padding: 2rem 1.25rem;
-  position: relative;
-  box-shadow:
-    inset 0 0 30px rgba(0, 0, 0, 0.8),
-    0 0 15px rgba(136, 176, 75, 0.1);
-  text-align: center;
+.booking-title h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.booking-title p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.booking-bar {
+  background: var(--ev-culinarios);
+  padding: 0.5rem;
+  display: flex;
+  gap: 4px;
+  border-radius: 4px;
+}
+
+.booking-field {
+  background: white;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  border-radius: 4px;
+  /* Slightly rounded like Despegar/Booking */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-}
-
-.result-price {
-  font-family: 'monospace';
-  color: var(--green-light);
-  /* Verde marca en modo neÃ³n */
-  text-shadow: 0 0 12px rgba(136, 176, 75, 0.6);
-  font-size: 2.22rem !important;
-  margin: 0.25rem 0 !important;
-}
-
-.result-label {
-  color: #666;
-  font-size: 0.7rem !important;
-  text-transform: uppercase;
-}
-
-/* Console Inputs */
-.quote-grid {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  /* Inputs a la izquierda, precio a la derecha */
-  gap: 1.5rem;
-  align-items: stretch;
-}
-
-@media (max-width: 768px) {
-  .quote-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.input-group {
-  background: rgba(255, 255, 255, 0.03);
-  /* Transparencia sutil sobre el fondo oscuro */
-  padding: 1.1rem;
-  border-radius: 15px;
-  border: 1px solid rgba(210, 180, 140, 0.2);
-  /* Borde arena sutil */
-}
-
-.input-group.checkbox {
-  padding: 1.25rem 1.1rem;
-}
-
-.input-group label {
-  color: var(--brown-sand) !important;
-  display: block;
-  text-transform: uppercase;
-  font-size: 0.65rem !important;
-  letter-spacing: 2px;
-  margin-bottom: 0.6rem;
-  font-weight: bold;
-}
-
-.input-group select,
-.input-group input[type="number"] {
-  width: 100%;
-  padding: 0.75rem;
-  background: #0b1d19 !important;
-  /* MÃ¡s oscuro para contraste */
-  border: 1px solid var(--green-dark) !important;
-  color: var(--white) !important;
-  border-radius: 8px !important;
-  font-weight: 600;
-  font-size: 0.9rem;
-  outline: none;
-}
-
-.input-group.row {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.input-group.row .col {
-  flex: 1;
-}
-
-/* Pots / Knobs */
-.radio-group {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.radio-opt {
-  padding: 0.55rem 0.85rem;
-  background: #1a3c34 !important;
-  /* Verde oscuro marca */
-  border: 1px solid rgba(210, 180, 140, 0.3) !important;
-  border-radius: 50px;
-  color: var(--brown-sand) !important;
-  font-size: 0.7rem !important;
-  cursor: pointer;
+  min-width: 180px;
+  position: relative;
   transition: 0.2s;
-  box-shadow: 0 4px 0 #07110d;
 }
 
-.radio-opt input {
-  display: none;
+.booking-field:hover {
+  background: #f9f9f9;
 }
 
-.radio-opt.active {
-  background: var(--green-light) !important;
-  color: var(--green-dark) !important;
-  box-shadow: 0 2px 0 #07110d;
-  transform: translateY(2px);
-  border-color: transparent !important;
+.booking-field label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 4px;
+  display: block;
 }
 
-.toggle {
-  display: flex !important;
+.booking-field select,
+.booking-field input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Input Row for small inputs */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.separator {
+  color: #ccc;
+  font-weight: 300;
+}
+
+.input-row input {
+  width: 100%;
+}
+
+/* Options Row */
+.options-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.checkbox-mini {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.checkbox-mini input {
+  width: auto;
+  cursor: pointer;
+}
+
+.mini-select {
+  font-size: 0.85rem !important;
+  border-bottom: 1px dotted #ccc !important;
+  padding-bottom: 2px !important;
+}
+
+/* Action Section */
+.booking-action {
+  flex: 1.2;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Mueve la perilla al final */
-  width: 100%;
+  background: white;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+}
+
+.price-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+}
+
+.price-display small {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.price-display .price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--green-dark);
+}
+
+.btn-search {
+  background: var(--green-dark);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+  white-space: nowrap;
 }
 
-.label-text {
-  color: var(--brown-sand);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.btn-search:hover {
+  background: var(--green-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.slider {
-  width: 44px;
-  height: 22px;
-  background-color: #0b1d19 !important;
-  border: 1px solid var(--brown-sand);
-  border-radius: 20px;
-  position: relative;
-  transition: 0.4s;
+/* Dark Mode Overrides */
+:root[data-theme="dark"] .booking-wrapper,
+:root[data-theme="dark"] .booking-bar {
+  background: #3d2b1f;
+  /* Darker wood/gold */
 }
 
-.slider:before {
-  content: "";
-  position: absolute;
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
-  background-color: var(--brown-sand) !important;
-  border-radius: 50%;
-  transition: 0.4s;
+:root[data-theme="dark"] .booking-field,
+:root[data-theme="dark"] .booking-action {
+  background: #1a1612;
 }
 
-.toggle input:checked+.slider {
-  background-color: var(--green-light) !important;
+:root[data-theme="dark"] .booking-field label {
+  color: #aaa;
 }
 
-.toggle input:checked+.slider:before {
-  transform: translateX(22px);
-  background-color: var(--green-dark) !important;
+:root[data-theme="dark"] .booking-field select,
+:root[data-theme="dark"] .booking-field input,
+:root[data-theme="dark"] .checkbox-mini,
+:root[data-theme="dark"] .price-display .price {
+  color: #eee;
 }
 
-.result-hint {
-  color: #4a6b63;
-  font-size: 0.65rem;
-  margin: 1rem 0;
-  font-style: italic;
-  line-height: 1.4;
+:root[data-theme="dark"] .booking-field:hover {
+  background: #251f1a;
 }
 
-.quote-calculator::after {
-  content: 'â€¢';
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  color: var(--brown-wood);
-  font-size: 14px;
-  text-shadow: 12px 0 var(--brown-wood), 0 12px var(--brown-wood), 12px 12px var(--brown-wood);
-  opacity: 0.6;
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .booking-bar {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .booking-field,
+  .booking-action {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .booking-action {
+    flex-direction: row;
+    padding: 1rem;
+  }
 }
 
 /* Reviews & Location Section */
