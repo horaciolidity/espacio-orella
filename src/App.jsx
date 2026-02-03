@@ -96,7 +96,7 @@ function App() {
       <main>
         <section className="hero">
           <div className="hero-inner container">
-            <h1>🌿 Espacio Orella</h1>
+            <h1>Espacio Orella</h1>
             <p className="subtitle">Descansa, trabaja y conecta con la naturaleza en San Antonio</p>
             <p className="hero-description">
               Un alojamiento acogedor en Barrancas, a minutos del puerto de San Antonio, donde la tranquilidad, el confort y una huerta propia se combinan para ofrecerte una experiencia auténtica. Ideal para turistas y viajeros de negocios que buscan un lugar cómodo, funcional y con alma
