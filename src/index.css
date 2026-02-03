@@ -350,8 +350,8 @@ h3,
   max-width: var(--max-width);
   /* Align with global container */
   margin: 0 auto;
-  margin-left: 5%;
-  /* Visual optical adjustment to the right */
+  margin-left: 10%;
+  /* Increased visual optical adjustment */
   padding: 0 1.25rem;
   /* Ensure padding matches container if overriden */
 }
