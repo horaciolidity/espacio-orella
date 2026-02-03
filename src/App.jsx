@@ -202,7 +202,7 @@ function App() {
 
           <div className="stats-grid animate-on-scroll">
             <div className="stat-card">
-              <h3>🌿 Qué incluye tu estadía</h3>
+              <h3>Qué incluye tu estadía</h3>
               <ul className="checklist">
                 <li>Wi-Fi</li>
                 <li>Atención personalizada 24/7</li>

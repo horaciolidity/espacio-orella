@@ -4,7 +4,7 @@ import { FaWhatsapp, FaRobot, FaTimes, FaPaperPlane } from 'react-icons/fa';
 const CHAT_FLOW = [
     {
         id: 'start',
-        message: '¡Hola! Bienvenid@ a Espacio Orella. 🌿 Soy tu asistente virtual. ¿Cómo te llamas?',
+        message: '¡Hola! Bienvenid@ a Espacio Orella. Soy tu asistente virtual. ¿Cómo te llamas?',
         key: 'name',
         next: 'service'
     },
@@ -96,7 +96,7 @@ function ChatBot() {
 
     const finishToWhatsApp = () => {
         const phone = "569XXXXXXXX"; // Replace with real number
-        const text = `Hola! Vengo del asistente web. 🌿\n\nMis datos de pre-reserva:\n👤 Nombre: ${userData.name}\n✨ Interés: ${userData.service}\n👥 Personas: ${userData.people}\n\n¿Me podrían dar más detalles?`;
+        const text = `Hola! Vengo del asistente web.\n\nMis datos de pre-reserva:\n👤 Nombre: ${userData.name}\n✨ Interés: ${userData.service}\n👥 Personas: ${userData.people}\n\n¿Me podrían dar más detalles?`;
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
     };
 
