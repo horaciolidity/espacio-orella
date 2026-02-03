@@ -70,7 +70,7 @@ function App() {
           <a href="#eventos" onClick={() => setIsMenuOpen(false)}>Eventos</a>
           <a href="#bienestar" onClick={() => setIsMenuOpen(false)}>Bienestar</a>
           <a href="#galeria" onClick={() => setIsMenuOpen(false)}>Galería</a>
-          <a href="#contacto" className="cta" onClick={() => setIsMenuOpen(false)}>Consultar disponibilidad</a>
+
 
           <div className="mobile-only header-social">
             <SocialLinks />
@@ -96,17 +96,7 @@ function App() {
             <p className="hero-description">
               Un alojamiento acogedor en Barrancas, a minutos del puerto de San Antonio, donde la tranquilidad, el confort y una huerta propia se combinan para ofrecerte una experiencia auténtica. Ideal para turistas y viajeros de negocios que buscan un lugar cómodo, funcional y con alma
             </p>
-            <div className="hero-ctas">
-              <a className="btn primary" href="#contacto">Consultar disponibilidad</a>
-              <a
-                className="btn whatsapp-hero"
-                href="https://wa.me/569XXXXXXXX"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Chat WhatsApp
-              </a>
-            </div>
+
           </div>
         </section>
 
