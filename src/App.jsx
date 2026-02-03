@@ -109,138 +109,327 @@ function App() {
         <section id="quienes-somos" className="container about">
           <div className="section-header animate-on-scroll">
             <span className="pre-title">Nuestra Historia</span>
-            <h2>Sobre Espacio Orella</h2>
-            <p>Un refugio pensado para la calma, la conexión con la naturaleza y el florecimiento de la creatividad en el corazón de Barrancas.</p>
+            <h2>Sobre Nosotros</h2>
+            <div className="about-content">
+              <p>Espacio Orella es un establecimiento de alojamiento turístico ubicado en Barrancas, Puerto de San Antonio, Chile. Ofrecemos habitaciones privadas con baño compartido y baño privado, estacionamiento, espacios de comida, cocina equipada, horno de barro, parrilla y todas las comodidades necesarias para una estadía confortable.</p>
+              <p>Además, contamos con huerta propia, servicio de desayuno y personal capacitado disponible 24/7 para atender a nuestros huéspedes.</p>
+            </div>
           </div>
-          <div className="about-grid">
-            <div className="card animate-on-scroll">
-              <h3>Alojamiento</h3>
-              <p>5 habitaciones privadas con baño compartido y espacios comunitarios.</p>
+          <div className="section-header animate-on-scroll" style={{ marginTop: '3rem' }}>
+            <h2>Nuestro Objetivo</h2>
+            <div className="about-content">
+              <p>Nuestro objetivo es proporcionar un entorno relajante y acogedor para nuestros huéspedes, ya sean turistas o viajeros de negocios que buscan un lugar tranquilo y productivo para descansar y trabajar. Contamos con una ubicación estratégica, cercana al puerto de San Antonio, lo que facilita el acceso a los principales puntos de interés de la zona.</p>
             </div>
-            <div className="card animate-on-scroll">
-              <h3>Comodidades</h3>
-              <p>Cocina compartida, huerta propia y áreas de descanso.</p>
+          </div>
+        </section>
+
+        <section id="alojamiento" className="container accommodation-section">
+          <div className="section-header animate-on-scroll">
+            <span className="pre-title">🗂️ Alojamiento</span>
+            <h2>Habitaciones confortables para descansar y sentirse como en casa</h2>
+            <p className="section-intro">En Espacio Orella ofrecemos distintas opciones de alojamiento, pensadas para adaptarse tanto a turistas como a viajeros de negocios. Contamos con habitaciones privadas, espacios tranquilos y áreas comunes completamente equipadas, en un entorno acogedor y funcional, a minutos del puerto de San Antonio.</p>
+          </div>
+
+          <div className="rooms-container">
+            <h3 className="sub-section-title">🛏️ Nuestras Habitaciones</h3>
+            <div className="rooms-grid">
+              <div className="card room-card animate-on-scroll">
+                <div className="card-tag">Planta Alta</div>
+                <h4>Habitación Matrimonial Superior</h4>
+                <p>Ideal para quienes buscan mayor comodidad, privacidad y amplitud.</p>
+                <ul className="feature-list">
+                  <li>Cama matrimonial</li>
+                  <li>Baño privado en suite</li>
+                  <li>Vestidor</li>
+                  <li>Terraza privada</li>
+                  <li>Excelente iluminación natural</li>
+                </ul>
+              </div>
+
+              <div className="card room-card animate-on-scroll">
+                <div className="card-tag">Baño Compartido</div>
+                <h4>Habitación Matrimonial</h4>
+                <p>Una opción cómoda y funcional para estadías cortas o prolongadas.</p>
+                <ul className="feature-list">
+                  <li>Cama matrimonial</li>
+                  <li>Placard</li>
+                  <li>Muy buena iluminación</li>
+                </ul>
+              </div>
+
+              <div className="card room-card animate-on-scroll">
+                <div className="card-tag">Individual</div>
+                <h4>Habitaciones Individuales</h4>
+                <p>Pensadas especialmente para viajeros de negocios o estadías individuales.</p>
+                <ul className="feature-list">
+                  <li>3 habitaciones con cama de 1 plaza y 1/2</li>
+                  <li>Baño compartido</li>
+                  <li>Ambiente tranquilo y confortable</li>
+                </ul>
+              </div>
+
+              <div className="card room-card animate-on-scroll">
+                <div className="card-tag">Planta Baja</div>
+                <h4>Habitaciones Dobles</h4>
+                <p>Ideales para compañeros de trabajo o amigos que viajan juntos.</p>
+                <ul className="feature-list">
+                  <li>2 habitaciones con dos camas de 1 plaza y 1/2</li>
+                  <li>Baño compartido</li>
+                  <li>Fácil acceso en planta baja</li>
+                </ul>
+              </div>
             </div>
-            <div className="card animate-on-scroll">
-              <h3>Ubicación</h3>
-              <p>Barrancas, cerca del Puerto de San Antonio — fácil acceso desde Santiago.</p>
+          </div>
+
+          <div className="common-spaces animate-on-scroll">
+            <h3>🏡 Espacios Comunes</h3>
+            <p>Nuestros espacios comunes están diseñados para el descanso, el encuentro y la comodidad diaria de nuestros huéspedes.</p>
+            <div className="common-grid">
+              <div className="feature-item">
+                <strong>Cocina equipada:</strong> Parrilla, horno de barro, horno tradicional, industrial, heladera y más.
+              </div>
+              <div className="feature-item">
+                <strong>Living comedor:</strong> Amplio y confortable para compartir momentos.
+              </div>
+              <div className="feature-item">
+                <strong>Barra de té/café:</strong> TV con área de cafetería disponible.
+              </div>
+              <div className="feature-item">
+                <strong>Lectura:</strong> Espacios dedicados al descanso y la lectura.
+              </div>
+            </div>
+          </div>
+
+          <div className="stats-grid animate-on-scroll">
+            <div className="stat-card">
+              <h3>🌿 Qué incluye tu estadía</h3>
+              <ul className="checklist">
+                <li>Wi-Fi</li>
+                <li>Atención personalizada 24/7</li>
+                <li>Estacionamiento exterior</li>
+                <li>Acceso a la huerta orgánica</li>
+                <li>Acceso a espacio de eventos</li>
+                <li>Cocina y Parrilla</li>
+              </ul>
+            </div>
+            <div className="stat-card">
+              <h3>🚐 Traslados y Movilidad</h3>
+              <p>Ofrecemos servicio de traslado (previa coordinación):</p>
+              <ul className="checklist">
+                <li>Hacia/desde Aeropuerto</li>
+                <li>Puerto de San Antonio</li>
+                <li>Zonas turísticas</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="cta-box animate-on-scroll">
+            <h3>💻 ¿Deseas visitarnos?</h3>
+            <p>Utiliza nuestro cotizador para conocer tarifas y disponibilidad.</p>
+            <div className="cta-group">
+              <a href="#cotizador" className="btn primary">👉 Cotizar estadía</a>
+              <a href="#contacto" className="btn ghost">👉 Consultar disponibilidad</a>
             </div>
           </div>
         </section>
 
         <section id="eventos" className="container events-section">
-          <div className="events-intro card">
-            <h2>Eventos y Contrataciones</h2>
-            <p>Espacio Orella ofrece un entorno versátil para eventos íntimos y medianos: talleres holísticos, retiros de bienestar, talleres de cocina autóctona, residencias creativas y encuentros culturales. Nuestra propuesta combina alojamiento para participantes, espacios interiores y al aire libre, huerta propia y opciones de catering local.</p>
-            <p className="muted">Capacidad típica: 10-30 personas (configurable). Equipamiento disponible: proyector, pantalla, sistema de sonido, mantas y cojines para prácticas, y cocina equipada para demostraciones culinarias.</p>
+          <div className="section-header animate-on-scroll">
+            <span className="pre-title">🗂️ Eventos</span>
+            <h2>Un espacio al aire libre para encuentros con sentido</h2>
+            <p className="section-intro">En Espacio Orella ofrecemos nuestro espacio de eventos al aire libre, con vista directa a la huerta, pensado para actividades que buscan conexión, bienestar y experiencias auténticas. Un entorno natural, tranquilo y cuidado, ideal para encuentros sociales, corporativos y actividades holísticas.</p>
           </div>
 
-          <div className="events-tabs">
-            <button className={`tab ${activeTab === 'resumen' ? 'active' : ''}`} data-type="resumen" onClick={() => setActiveTab('resumen')}>Resumen</button>
-            <button className={`tab ${activeTab === 'holisticos' ? 'active' : ''}`} data-type="holisticos" onClick={() => setActiveTab('holisticos')}>Talleres Holísticos</button>
-            <button className={`tab ${activeTab === 'retiros' ? 'active' : ''}`} data-type="retiros" onClick={() => setActiveTab('retiros')}>Retiros</button>
-            <button className={`tab ${activeTab === 'culinarios' ? 'active' : ''}`} data-type="culinarios" onClick={() => setActiveTab('culinarios')}>Talleres Culinarios</button>
-            <button className={`tab ${activeTab === 'cultural' ? 'active' : ''}`} data-type="cultural" onClick={() => setActiveTab('cultural')}>Creativo & Cultural</button>
+          <div className="events-grid-new">
+            <div className="card animate-on-scroll">
+              <h3>✨ Nuestro Espacio</h3>
+              <p>El espacio cuenta con:</p>
+              <ul className="checklist">
+                <li>Área al aire libre con huerta a la vista</li>
+                <li>Equipo de sonido</li>
+                <li>Espacios de descanso y relajación</li>
+                <li>Sectores versátiles para distintas actividades</li>
+                <li>Box privado con servicio de masajes</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>🧩 Actividades Ideales</h3>
+              <p>Nuestro espacio es perfecto para:</p>
+              <div className="activities-list">
+                <span className="tag">Reuniones empresariales</span>
+                <span className="tag">Talleres de cocina</span>
+                <span className="tag">Yoga y Reiki</span>
+                <span className="tag">Meditaciones</span>
+                <span className="tag">Tardes de té</span>
+                <span className="tag">Cenas privadas</span>
+                <span className="tag">Celebraciones íntimas</span>
+              </div>
+            </div>
           </div>
 
-          <div className="events-content">
-            {activeTab === 'resumen' && (
-              <div className="card">
-                <h3>Resumen de servicios para eventos</h3>
-                <p>Ofrecemos paquetes flexibles que incluyen alojamiento, uso de espacios comunes, apoyo logístico y opciones de alimentación con productos locales. Ideal para facilitadores, organizaciones y grupos creativos que buscan una experiencia inmersiva junto al mar.</p>
-                <p className="muted">Duración típica: 1 fin de semana — 7 días. Posibilidad de adaptaciones según necesidades.</p>
-              </div>
-            )}
+          <div className="identity-block animate-on-scroll">
+            <div className="card">
+              <h3>🌱 Experiencias con identidad</h3>
+              <p>La combinación de naturaleza, huerta orgánica y espacios pensados para el bienestar convierte a Espacio Orella en un lugar único para desarrollar actividades que promueven el encuentro, el aprendizaje y el descanso, lejos del ruido y el ritmo acelerado.</p>
+            </div>
+          </div>
 
-            {activeTab === 'holisticos' && (
-              <div className="events-grid">
-                <article className="card event-card" data-type="holisticos">
-                  <h3>Taller de Yoga y Meditación</h3>
-                  <p>Espacios tranquilos y materiales para sesiones diarias de práctica y meditación guiada.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-                <article className="card event-card" data-type="holisticos">
-                  <h3>Sesión de Reiki Grupal</h3>
-                  <p>Facilitadores y salas individuales para trabajos terapéuticos.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-              </div>
-            )}
-
-            {activeTab === 'retiros' && (
-              <div className="events-grid">
-                <article className="card event-card" data-type="retiros">
-                  <h3>Retiro de Bienestar 3 días</h3>
-                  <p>Programa con alojamiento, comidas saludables y actividades guiadas.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-                <article className="card event-card" data-type="retiros">
-                  <h3>Retiro Intensivo</h3>
-                  <p>Semanas temáticas con facilitadores invitados y programación especializada.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-              </div>
-            )}
-
-            {activeTab === 'culinarios' && (
-              <div className="events-grid">
-                <article className="card event-card" data-type="culinarios">
-                  <h3>Taller de Cocina Autóctona</h3>
-                  <p>Manos a la obra con ingredientes de la huerta y técnicas locales.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-                <article className="card event-card" data-type="culinarios">
-                  <h3>Demostración + Degustación</h3>
-                  <p>Clases con degustación y maridaje local.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-              </div>
-            )}
-
-            {activeTab === 'cultural' && (
-              <div className="events-grid">
-                <article className="card event-card" data-type="cultural">
-                  <h3>Encuentros Creativos</h3>
-                  <p>Residencias, lecturas, presentaciones y encuentros comunitarios con apoyo en difusión.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-                <article className="card event-card" data-type="cultural">
-                  <h3>Conciertos / Pequeños Festivales</h3>
-                  <p>Espacio adaptable para eventos musicales y presentaciones en vivo.</p>
-                  <button className="btn contratar" onClick={() => window.location.hash = '#contacto'}>Contratar</button>
-                </article>
-              </div>
-            )}
+          <div className="cta-box animate-on-scroll">
+            <h3>📞 Consultas y Reservas</h3>
+            <p>Cada evento es único. Contáctanos para conocer disponibilidad, condiciones y armar una propuesta a medida según tu actividad.</p>
+            <div className="cta-group">
+              <a href="#contacto" className="btn primary">👉 Consultar disponibilidad</a>
+            </div>
           </div>
         </section>
 
-        <section id="servicios" className="wellbeing-section container">
+        <section id="servicios" className="container services-section">
           <div className="section-header animate-on-scroll">
-            <span className="pre-title">Cuidado Holístico</span>
-            <h2>Servicios de Bienestar</h2>
-            <p className="section-intro">Descubre un refugio para el alma. Ofrecemos terapias y prácticas diseñadas para restaurar el equilibrio, la paz interior y la vitalidad en un entorno natural único.</p>
+            <span className="pre-title">🗂️ Servicios</span>
+            <h2>Servicios pensados para tu comodidad, experiencia y negocios</h2>
+            <p className="section-intro">En Espacio Orella ofrecemos una propuesta integral de servicios para huéspedes y visitantes, combinando gastronomía, bienestar, movilidad, turismo y apoyo al viajero corporativo. Todo está pensado para que tu estadía en San Antonio sea cómoda, segura y productiva, ya sea por trabajo o por placer.</p>
           </div>
-          <div className="well-grid">
-            <article className="well-card animate-on-scroll">
-              <div className="well-icon">✨</div>
-              <h3>Reiki Holístico</h3>
-              <p>Canalización de energía vital para armonizar cuerpo y mente, reduciendo el estrés y promoviendo la autosanación profunda.</p>
-            </article>
-            <article className="well-card animate-on-scroll">
-              <div className="well-icon">🧘</div>
-              <h3>Meditación Guiada</h3>
-              <p>Sesiones de mindfulness y respiración consciente frente al mar, diseñadas para cultivar la presencia y la claridad mental.</p>
-            </article>
-            <article className="well-card animate-on-scroll">
-              <div className="well-icon">💆</div>
-              <h3>Masajes Terapéuticos</h3>
-              <p>Técnicas integrales de relajación y descontracturantes con aceites esenciales orgánicos de nuestra propia huerta.</p>
-            </article>
-            <article className="well-card animate-on-scroll">
-              <div className="well-icon">🏺</div>
-              <h3>Sanación Sonora</h3>
-              <p>Baños de bosque y cuencos tibetanos que utilizan la vibración para inducir estados de relajación profunda y renovación.</p>
-            </article>
+
+          <div className="services-grid-main">
+            <div className="card animate-on-scroll">
+              <h3>🍽️ Gastronomía para Huéspedes</h3>
+              <p>Ofrecemos servicio de desayuno, almuerzo y cena con preparaciones caseras, productos frescos e ingredientes de nuestra huerta.</p>
+              <p className="muted">Coordinación directa según disponibilidad.</p>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>🥂 Gastronomía para Eventos</h3>
+              <ul className="checklist">
+                <li>Cenas románticas y de negocios</li>
+                <li>Degustación de vinos</li>
+                <li>Reuniones familiares</li>
+                <li>Servicio de cafetería y tardes de té</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>🌱 Talleres y Bienestar</h3>
+              <div className="service-sub-grid">
+                <div>
+                  <h4>Talleres</h4>
+                  <ul className="feature-list">
+                    <li>Jardinería</li>
+                    <li>Cocina autóctona</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Bienestar</h4>
+                  <ul className="feature-list">
+                    <li>Masajes</li>
+                    <li>Reiki</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>🚐 Traslados y Turismo</h3>
+              <ul className="checklist">
+                <li>Aeropuerto y Puerto San Antonio</li>
+                <li>Zonas turísticas y puntos de interés</li>
+                <li>Guía turístico y Turismo aventura</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll business-card">
+              <h3>💼 Servicios para Viajeros de Negocios</h3>
+              <ul className="feature-list">
+                <li>Servicio de cambio de monedas</li>
+                <li>Asesoramiento sobre zonas seguras</li>
+                <li>Orientación sobre oportunidades de negocio</li>
+                <li>Contactos estratégicos y referencias locales</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="cta-box animate-on-scroll">
+            <h3>📞 Consultas y Reservas</h3>
+            <p>Para conocer más sobre nuestros servicios, propuestas gastronómicas, eventos o asistencia corporativa, contáctanos.</p>
+            <div className="cta-group">
+              <a href="#contacto" className="btn primary">👉 Consultar servicios</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="viajes-corporativos" className="container corporate-section">
+          <div className="section-header animate-on-scroll">
+            <span className="pre-title">🗂️ Viajes Corporativos</span>
+            <h2>Alojamiento y servicios pensados para viajes de negocios en San Antonio</h2>
+            <p className="section-intro">En Espacio Orella ofrecemos una propuesta integral para viajeros corporativos, combinando comodidad, tranquilidad y una ubicación estratégica cercana al puerto de San Antonio. Nuestro espacio está diseñado para quienes necesitan descansar bien, trabajar con comodidad y contar con apoyo local confiable durante su estadía.</p>
+          </div>
+
+          <div className="corporate-grid">
+            <div className="card animate-on-scroll">
+              <h3>🏢 Alojamiento para Empresas</h3>
+              <p>Opciones ideales para:</p>
+              <ul className="checklist">
+                <li>Ejecutivos</li>
+                <li>Personal portuario</li>
+                <li>Técnicos y profesionales</li>
+                <li>Estadías cortas y prolongadas</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>📍 Ubicación Estratégica</h3>
+              <ul className="feature-list">
+                <li>Cercanía al puerto de San Antonio</li>
+                <li>Fácil acceso a zonas industriales</li>
+                <li>Entorno tranquilo y seguro</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll highlight-card">
+              <h3>🍽️ Servicios Corporativos</h3>
+              <ul className="checklist">
+                <li>Desayuno, almuerzo y cena</li>
+                <li>Wi-Fi de alta velocidad</li>
+                <li>Atención personalizada 24/7</li>
+                <li>Estacionamiento para camionetas</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>💼 Asistencia Empresarial</h3>
+              <ul className="feature-list">
+                <li>Servicio de cambio de monedas</li>
+                <li>Asesoramiento sobre zonas seguras</li>
+                <li>Información de oportunidades locales</li>
+                <li>Contactos estratégicos y referencias</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>🚐 Movilidad y Logística</h3>
+              <ul className="checklist">
+                <li>Traslados Aeropuerto / Puerto</li>
+                <li>Coordinación de movilidad laboral</li>
+              </ul>
+            </div>
+
+            <div className="card animate-on-scroll">
+              <h3>🤝 Reuniones y Encuentros</h3>
+              <p>Espacios discretos para:</p>
+              <ul className="feature-list">
+                <li>Reuniones de trabajo</li>
+                <li>Encuentros empresariales</li>
+                <li>Cenas de negocios</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="cta-box animate-on-scroll">
+            <h3>📞 Consultas Corporativas</h3>
+            <p>Si representas a una empresa, contáctanos para conocer tarifas corporativas y convenios.</p>
+            <div className="cta-group">
+              <a href="#contacto" className="btn primary">👉 Consultar viajes corporativos</a>
+            </div>
           </div>
         </section>
 
